@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1F2937" media="(prefers-color-scheme: dark)">
+  <title>GHF Ventures | Capital Alignment Within a Global Health Ecosystem</title>
+  <link rel="icon" type="image/png" href="https://web.tanka.ai/static/tanka-favicon.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      height: 100%;
+      height: 100dvh;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      height: 100dvh;
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+.tanka-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(15, 41, 77, 0.05);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+.tanka-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 16px;
+  gap: 2px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.tanka-left-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+.tanka-logo {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: block;
+}
+.tanka-brand-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px;
+}
+.tanka-brand-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #020617;
+  line-height: 1.193359375;
+  white-space: nowrap;
+}
+.tanka-brand-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6F7F94;
+  line-height: 1.3999999364217122;
+  white-space: nowrap;
+}
+.tanka-try-now-btn {
+  background-color: #005EFF;
+  color: #FFFFFF;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3999999364217122;
+  height: 32px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tanka-try-now-btn:hover {
+  background-color: #0040DD;
+}
+@media (min-width: 769px) {
+  .tanka-header-container {
+    padding: 12px 24px;
+  }
+}
+    #tanka-content-iframe {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 65px);
+      height: calc(100dvh - 65px - env(safe-area-inset-bottom, 0px));
+      border: none;
+    }
+  </style>
+</head>
+<body>
+<header class="tanka-header">
+  <div class="tanka-header-container">
+    <div class="tanka-left-section">
+      <svg class="tanka-logo" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="9" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6875 36.7501V30.768H1L11.6875 36.7501Z" fill="#0050DC"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 22.4006L39 22.3931L38.9983 30.7681H1V22.4006Z" fill="#005EFF"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 12.8215H39V21.1965H1V12.8215Z" fill="#00D0FF"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 3.24988H28.3125V11.6249H1V3.24988Z" fill="#00F064"/>
+      </svg>
+      <div class="tanka-brand-info">
+        <span class="tanka-brand-name">Tanka</span>
+        <span class="tanka-brand-sub">Made by Tanka</span>
+      </div>
+    </div>
+    <a href="https://www.tanka.ai" target="_blank" class="tanka-try-now-btn" id="tanka-try-now-btn" onclick="handleTankaTryNowClick(event)">Try Now</a>
+  </div>
+</header>
+  <iframe id="tanka-content-iframe" srcdoc="<html lang=&quot;en&quot; class=&quot;scroll-smooth&quot;>
+<head>
+    <meta charset=&quot;UTF-8&quot;>
+    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no&quot;>
+    <title>GHF Ventures | Capital Alignment Within a Global Health Ecosystem</title>
+    
+    <!-- Design Specifications:
+         Style: Premium, institutional, serious (Attio inspired but adapted for finance/healthcare)
+         Primary Colors: Deep Navy (#0A1628), Rich Teal (#0D6E6E), Warm Gold (#C9A84C)
+         Secondary Colors: Light Cream (#F5F0E8), Mid gray (#6B7280), White (#FFFFFF)
+         Typography: Playfair Display (Headings), Inter (Body)
+    -->
+
+    <!-- Google Fonts -->
+    <link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>
+    <link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
+    <link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=DM+Mono:wght@400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+    
+    <!-- Font Awesome -->
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css&quot;>
+
+    <!-- Tailwind CSS -->
+    <script src=&quot;https://cdn.tailwindcss.com&quot;></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: &#39;#0A1628&#39;,
+                            800: &#39;#112240&#39;,
+                        },
+                        teal: {
+                            600: &#39;#0D6E6E&#39;,
+                            700: &#39;#0A5A5A&#39;,
+                        },
+                        gold: {
+                            400: &#39;#D4B55B&#39;,
+                            500: &#39;#C9A84C&#39;,
+                            600: &#39;#B8973B&#39;,
+                        },
+                        cream: {
+                            100: &#39;#FDFCF9&#39;,
+                            200: &#39;#F5F0E8&#39;,
+                        },
+                        gray: {
+                            500: &#39;#6B7280&#39;,
+                            800: &#39;#1F2937&#39;,
+                        }
+                    },
+                    fontFamily: {
+                        heading: [&#39;&quot;Playfair Display&quot;&#39;, &#39;serif&#39;],
+                        sans: [&#39;Inter&#39;, &#39;sans-serif&#39;],
+                        mono: [&#39;&quot;DM Mono&quot;&#39;, &#39;monospace&#39;],
+                    },
+                    boxShadow: {
+                        &#39;subtle&#39;: &#39;0 4px 20px rgba(0, 0, 0, 0.05)&#39;,
+                        &#39;card&#39;: &#39;0 10px 30px rgba(0, 0, 0, 0.08)&#39;,
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --sb-track-color: transparent;
+            --sb-thumb-color: rgba(107, 114, 128, 0.3);
+            --sb-size: 6px;
+        }
+
+        ::-webkit-scrollbar {
+            width: var(--sb-size);
+            height: var(--sb-size);
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--sb-track-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--sb-thumb-color);
+            border-radius: 10px;
+        }
+
+        html, body {
+            height: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Custom Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Abstract Background Patterns */
+        .bg-pattern-dots {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .bg-pattern-lines {
+            background-image: linear-gradient(rgba(10, 22, 40, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(10, 22, 40, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Accordion Transitions */
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        
+        .accordion-content.open {
+            max-height: 500px; /* Arbitrary large number */
+            opacity: 1;
+        }
+
+        /* Mobile Menu Transition */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-scrolled .nav-link {
+            color: #1F2937;
+        }
+        
+        .nav-scrolled .logo-text {
+            color: #0A1628;
+        }
+        
+        .nav-scrolled .hamburger-line {
+            background-color: #0A1628;
+        }
+    </style>
+</head>
+<body class=&quot;font-sans text-gray-800 bg-white selection:bg-gold-500 selection:text-navy-900&quot;>
+
+    <!-- Navigation -->
+    <nav id=&quot;navbar&quot; class=&quot;fixed w-full z-50 transition-all duration-300 py-4 border-b border-white/10&quot;>
+        <div class=&quot;max-w-7xl mx-auto px-6 lg:px-8&quot;>
+            <div class=&quot;flex justify-between items-center&quot;>
+                <!-- Logo -->
+                <a href=&quot;#&quot; class=&quot;flex items-center gap-2 group&quot;>
+                    <div class=&quot;w-8 h-8 bg-gold-500 rounded-sm flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300&quot;>
+                        <i class=&quot;fa-solid fa-vault text-navy-900 text-sm&quot;></i>
+                    </div>
+                    <span class=&quot;logo-text font-heading font-bold text-xl tracking-wider text-white transition-colors duration-300&quot;>GHF VENTURES</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class=&quot;hidden lg:flex items-center space-x-8&quot;>
+                    <a href=&quot;#why-we-exist&quot; class=&quot;nav-link text-white/80 hover:text-gold-500 text-sm font-medium transition-colors duration-200&quot;>Why It Exists</a>
+                    <a href=&quot;#founders&quot; class=&quot;nav-link text-white/80 hover:text-gold-500 text-sm font-medium transition-colors duration-200&quot;>For Founders</a>
+                    <a href=&quot;#investors&quot; class=&quot;nav-link text-white/80 hover:text-gold-500 text-sm font-medium transition-colors duration-200&quot;>For Investors</a>
+                    <a href=&quot;#congress&quot; class=&quot;nav-link text-white/80 hover:text-gold-500 text-sm font-medium transition-colors duration-200&quot;>Congress 2026</a>
+                    <div class=&quot;flex items-center gap-3 ml-4&quot;>
+                        <a href=&quot;#contact&quot; class=&quot;px-4 py-1.5 bg-gold-500 hover:bg-gold-400 text-navy-900 text-xs font-bold rounded-sm transition-all&quot;>Apply</a>
+                        <a href=&quot;#contact&quot; class=&quot;px-4 py-1.5 border border-gold-500 text-gold-500 hover:bg-gold-500/10 text-xs font-bold rounded-sm transition-all&quot;>Connect</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id=&quot;mobile-menu-btn&quot; class=&quot;lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none z-50&quot;>
+                    <span class=&quot;hamburger-line block w-6 h-0.5 bg-white transition-transform duration-300 origin-center&quot;></span>
+                    <span class=&quot;hamburger-line block w-6 h-0.5 bg-white transition-opacity duration-300&quot;></span>
+                    <span class=&quot;hamburger-line block w-6 h-0.5 bg-white transition-transform duration-300 origin-center&quot;></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id=&quot;mobile-menu&quot; class=&quot;fixed inset-0 bg-navy-900 z-40 opacity-0 pointer-events-none flex flex-col justify-center items-center&quot;>
+            <div class=&quot;flex flex-col items-center space-y-8 text-center&quot;>
+                <a href=&quot;#why-we-exist&quot; class=&quot;mobile-link text-2xl font-heading text-white hover:text-gold-500 transition-colors&quot;>Why It Exists</a>
+                <a href=&quot;#founders&quot; class=&quot;mobile-link text-2xl font-heading text-white hover:text-gold-500 transition-colors&quot;>For Founders</a>
+                <a href=&quot;#investors&quot; class=&quot;mobile-link text-2xl font-heading text-white hover:text-gold-500 transition-colors&quot;>For Investors</a>
+                <a href=&quot;#congress&quot; class=&quot;mobile-link text-2xl font-heading text-white hover:text-gold-500 transition-colors&quot;>Congress 2026</a>
+                    <div class=&quot;flex flex-col gap-4 pt-4&quot;>
+                        <a href=&quot;#contact&quot; class=&quot;mobile-link px-8 py-3 bg-gold-500 text-navy-900 font-bold rounded-sm&quot;>Apply</a>
+                        <a href=&quot;#contact&quot; class=&quot;mobile-link px-8 py-3 border border-gold-500 text-gold-500 font-bold rounded-sm&quot;>Connect</a>
+                    </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO -->
+    <section class=&quot;relative min-h-screen flex items-center justify-center bg-navy-900 overflow-hidden pt-20&quot;>
+        <!-- Abstract Background Elements -->
+        <div class=&quot;absolute inset-0 bg-pattern-dots opacity-20&quot;></div>
+        <div class=&quot;absolute top-0 right-0 w-[800px] h-[800px] bg-teal-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3&quot;></div>
+        <div class=&quot;absolute bottom-0 left-0 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4&quot;></div>
+        
+        <!-- Decorative Line -->
+        <div class=&quot;absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent hidden lg:block&quot;></div>
+
+        <div class=&quot;relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full py-20&quot;>
+            <div class=&quot;max-w-4xl&quot;>
+                <div class=&quot;fade-up flex items-center gap-4 mb-8&quot;>
+                    <div class=&quot;h-px w-12 bg-gold-500&quot;></div>
+                    <span class=&quot;text-gold-500 font-medium tracking-widest text-sm uppercase&quot;>The Innovation &amp; Capital Arm of Global Health Forum</span>
+                </div>
+                
+                <h1 class=&quot;fade-up delay-100 font-heading text-5xl md:text-7xl lg:text-8xl text-white font-bold leading-tight mb-6&quot;>
+                    GHF <br/><span class=&quot;text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60&quot;>VENTURES</span>
+                </h1>
+                
+                <h2 class=&quot;fade-up delay-200 text-xl md:text-3xl text-white/90 font-heading font-medium mb-8 max-w-3xl leading-snug&quot;>
+                    Where Clinical Innovation Meets Institutional Capital
+                </h2>
+                
+                <p class=&quot;fade-up delay-300 text-lg text-white/70 mb-10 max-w-2xl leading-relaxed font-light&quot;>
+                    GHF Ventures is a year round strategic platform connecting expansion ready healthcare companies with disciplined institutional capital. Operating within the Global Health Forum ecosystem, we facilitate structured financing dialogues, governance aligned partnerships, and cross border growth strategies for companies building the next generation of scalable health solutions.
+                </p>
+                
+                <div class=&quot;fade-up delay-300 mb-12 border-l-2 border-gold-500 pl-6 py-2&quot;>
+                    <p class=&quot;text-gold-400 font-heading italic text-xl&quot;>
+                        Anchored in the Global Health Forum. Activated annually at Global Health Congress.
+                    </p>
+                </div>
+                
+                <div class=&quot;fade-up delay-300 flex flex-col sm:flex-row items-start sm:items-center gap-6&quot;>
+                    <a href=&quot;#contact&quot; class=&quot;w-full sm:w-auto px-8 py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold rounded-sm transition-all duration-300 text-center shadow-[0_0_20px_rgba(201,168,76,0.3)] hover:shadow-[0_0_30px_rgba(201,168,76,0.5)] hover:-translate-y-1&quot;>
+                        Apply as Founder
+                    </a>
+                    <a href=&quot;#contact&quot; class=&quot;w-full sm:w-auto px-8 py-4 border border-gold-500 text-gold-500 hover:bg-gold-500/10 font-semibold rounded-sm transition-all duration-300 text-center hover:-translate-y-1&quot;>
+                        Connect as Investor
+                    </a>
+                    <a href=&quot;#integration&quot; class=&quot;w-full sm:w-auto text-white/60 hover:text-white text-sm font-medium transition-colors flex items-center justify-center sm:justify-start gap-2 mt-4 sm:mt-0 group&quot;>
+                        About Global Health Forum 
+                        <i class=&quot;fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1 transition-transform&quot;></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class=&quot;absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce opacity-50&quot;>
+            <span class=&quot;text-white/50 text-xs tracking-widest uppercase mb-2&quot;>Scroll</span>
+            <i class=&quot;fa-solid fa-arrow-down text-white/50 text-sm&quot;></i>
+        </div>
+    </section>
+
+    <!-- SECTION 2: WHY WE EXIST -->
+    <section id=&quot;why-we-exist&quot; class=&quot;py-24 lg:py-32 bg-cream-200 relative&quot;>
+        <div class=&quot;absolute inset-0 bg-pattern-lines opacity-50&quot;></div>
+        
+        <div class=&quot;max-w-7xl mx-auto px-6 lg:px-8 relative z-10&quot;>
+            <div class=&quot;flex flex-col lg:flex-row gap-16 lg:gap-24&quot;>
+                <!-- Left Column -->
+                <div class=&quot;lg:w-1/3&quot;>
+                    <div class=&quot;fade-up sticky top-32&quot;>
+                        <span class=&quot;text-teal-600 font-bold tracking-widest text-xs uppercase mb-4 block&quot;>WHY WE EXIST</span>
+                        <h2 class=&quot;font-heading text-4xl md:text-5xl text-navy-900 font-bold leading-tight mb-6&quot;>
+                            Closing the <br>Alignment Gap
+                        </h2>
+                        <p class=&quot;text-gray-600 text-lg leading-relaxed mb-8&quot;>
+                            Transformative healthcare innovation fails not because of technology — but because of misalignment. Between clinical reality and capital strategy. Between regulatory frameworks and operational execution. Between the ambition to scale and the infrastructure to do it.
+                        </p>
+                        <div class=&quot;p-6 bg-white border-l-4 border-teal-600 shadow-subtle rounded-r-lg&quot;>
+                            <p class=&quot;text-navy-900 font-semibold text-lg&quot;>
+                                GHF Ventures was built to close that gap.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class=&quot;lg:w-2/3&quot;>
+                    <div class=&quot;fade-up&quot;>
+                        <h3 class=&quot;font-heading text-2xl text-navy-900 font-semibold mb-8 border-b border-gray-200 pb-4&quot;>
+                            We evaluate every opportunity through a rigorous institutional framework:
+                        </h3>
+                        
+                        <div class=&quot;grid grid-cols-1 gap-4 mb-12&quot;>
+                            <div class=&quot;px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 flex items-center gap-4&quot;>
+                                <span class=&quot;w-8 h-8 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center font-bold&quot;>1</span>
+                                <div>
+                                    <span class=&quot;block font-bold text-base&quot;>Clinical Efficacy</span>
+                                    <span class=&quot;text-gray-500 font-normal&quot;>Validated solutions addressing critical, unmet care needs</span>
+                                </div>
+                            </div>
+                            <div class=&quot;px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 flex items-center gap-4&quot;>
+                                <span class=&quot;w-8 h-8 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center font-bold&quot;>2</span>
+                                <div>
+                                    <span class=&quot;block font-bold text-base&quot;>Operational Maturity</span>
+                                    <span class=&quot;text-gray-500 font-normal&quot;>Governance structures and regulatory alignment that de risk scaling</span>
+                                </div>
+                            </div>
+                            <div class=&quot;px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 flex items-center gap-4&quot;>
+                                <span class=&quot;w-8 h-8 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center font-bold&quot;>3</span>
+                                <div>
+                                    <span class=&quot;block font-bold text-base&quot;>System Integration</span>
+                                    <span class=&quot;text-gray-500 font-normal&quot;>Designed for adoption within existing health infrastructure</span>
+                                </div>
+                            </div>
+                            <div class=&quot;px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 flex items-center gap-4&quot;>
+                                <span class=&quot;w-8 h-8 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center font-bold&quot;>4</span>
+                                <div>
+                                    <span class=&quot;block font-bold text-base&quot;>Global Scalability</span>
+                                    <span class=&quot;text-gray-500 font-normal&quot;>Viable across diverse markets, regulatory environments, and care models</span>
+                                </div>
+                            </div>
+                            <div class=&quot;px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 flex items-center gap-4&quot;>
+                                <span class=&quot;w-8 h-8 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center font-bold&quot;>5</span>
+                                <div>
+                                    <span class=&quot;block font-bold text-base&quot;>Health Equity</span>
+                                    <span class=&quot;text-gray-500 font-normal&quot;>Advancing access and outcomes across underserved populations</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class=&quot;font-heading italic text-xl text-gray-500 text-center lg:text-left&quot;>
+                            Our mandate is durable, system level value creation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: OUR STRUCTURE -->
+    <section id=&quot;structure&quot; class=&quot;py-24 lg:py-32 bg-white&quot;>
+        <div class=&quot;max-w-7xl mx-auto px-6 lg:px-8&quot;>
+            <div class=&quot;fade-up text-center max-w-3xl mx-auto mb-20&quot;>
+                <span class=&quot;text-teal-600 font-bold tracking-widest text-xs uppercase mb-4 block&quot;>Our Structure</span>
+                <h2 class=&quot;font-heading text-4xl md:text-5xl text-navy-900 font-bold mb-6&quot;>Three Integrated Pathways</h2>
+                    <p class=&quot;text-gray-600 text-lg&quot;>GHF Ventures operates through a structured, multi tiered approach to ensure continuous engagement and alignment.</p>
+            </div>
+
+            <div class=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-16&quot;>
+                <!-- Card 1 -->
+                <div class=&quot;fade-up bg-cream-100 border border-gray-100 rounded-xl p-8 hover:shadow-card transition-shadow duration-300 group relative overflow-hidden&quot;>
+                    <div class=&quot;absolute top-0 right-0 w-32 h-32 bg-teal-600/5 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110&quot;></div>
+                    
+                    <div class=&quot;w-14 h-14 bg-white rounded-lg shadow-sm flex items-center justify-center mb-8 relative z-10&quot;>
+                        <i class=&quot;fa-solid fa-flask text-teal-600 text-xl&quot;></i>
+                    </div>
+                    
+                    <h3 class=&quot;font-heading text-2xl text-navy-900 font-bold mb-4 relative z-10&quot;>Innovation Lab</h3>
+                    <p class=&quot;text-gray-600 mb-6 text-sm leading-relaxed relative z-10&quot;>
+                        A curated platform featuring companies solving real clinical and operational challenges. Founders receive structured dialogue with:
+                    </p>
+                    
+                    <ul class=&quot;space-y-3 mb-6 relative z-10&quot;>
+                        <li class=&quot;flex items-center gap-3 text-sm text-navy-900 font-medium&quot;>
+                            <i class=&quot;fa-solid fa-check text-gold-500 text-xs&quot;></i> Physicians
+                        </li>
+                        <li class=&quot;flex items-center gap-3 text-sm text-navy-900 font-medium&quot;>
+                            <i class=&quot;fa-solid fa-check text-gold-500 text-xs&quot;></i> Health system operators
+                        </li>
+                        <li class=&quot;flex items-center gap-3 text-sm text-navy-900 font-medium&quot;>
+                            <i class=&quot;fa-solid fa-check text-gold-500 text-xs&quot;></i> Policy advisors
+                        </li>
+                        <li class=&quot;flex items-center gap-3 text-sm text-navy-900 font-medium&quot;>
+                            <i class=&quot;fa-solid fa-check text-gold-500 text-xs&quot;></i> Institutional investors
+                        </li>
+                    </ul>
+                    
+                    <div class=&quot;pt-6 border-t border-gray-200 relative z-10&quot;>
+                        <p class=&quot;text-xs text-gray-500 italic&quot;>Feedback emphasizes governance, regulatory clarity, and long term scalability.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class=&quot;fade-up delay-100 bg-navy-900 rounded-xl p-8 shadow-card relative overflow-hidden transform md:-translate-y-4&quot;>
+                    <div class=&quot;absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-bl-full -mr-10 -mt-10&quot;></div>
+                    
+                    <div class=&quot;w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center mb-8 relative z-10 backdrop-blur-sm&quot;>
+                        <i class=&quot;fa-solid fa-comments-dollar text-gold-400 text-xl&quot;></i>
+                    </div>
+                    
+                    <h3 class=&quot;font-heading text-2xl text-white font-bold mb-4 relative z-10&quot;>Venture &amp; Investment Forum</h3>
+                    <p class=&quot;text-white/70 mb-6 text-sm leading-relaxed relative z-10&quot;>
+                        Held annually during Global Health Congress. Selected ventures present within a moderated format designed for substantive engagement, not theatrical pitching.
+                    </p>
+                    
+                    <div class=&quot;p-4 bg-white/5 rounded-lg border border-white/10 relative z-10 mt-auto&quot;>
+                        <p class=&quot;text-gold-400 font-medium text-sm text-center&quot;>
+                            The focus is disciplined capital alignment and institutional partnership.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class=&quot;fade-up delay-200 bg-cream-100 border border-gray-100 rounded-xl p-8 hover:shadow-card transition-shadow duration-300 group relative overflow-hidden&quot;>
+                    <div class=&quot;absolute top-0 right-0 w-32 h-32 bg-teal-600/5 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110&quot;></div>
+                    
+                    <div class=&quot;w-14 h-14 bg-white rounded-lg shadow-sm flex items-center justify-center mb-8 relative z-10&quot;>
+                        <i class=&quot;fa-solid fa-globe text-teal-600 text-xl&quot;></i>
+                    </div>
+                    
+                    <h3 class=&quot;font-heading text-2xl text-navy-900 font-bold mb-4 relative z-10&quot;>Year Round Capital Alignment</h3>
+                    <p class=&quot;text-gray-600 mb-6 text-sm leading-relaxed relative z-10&quot;>
+                        GHF Ventures facilitates introductions across our global network:
+                    </p>
+                    
+                    <ul class=&quot;space-y-3 mb-6 relative z-10&quot;>
+                        <li class=&quot;flex items-center gap-3 text-sm text-navy-900 font-medium&quot;>
+                            <div class=&quot;w-1.5 h-1.5 rounded-full bg-teal-600&quot;></div> Global Health Forum membership
+                        </li>
+                        <li class=&quot;flex items-center gap-3 text-sm text-navy-900 font-medium&quot;>
+                            <div class=&quot;w-1.5 h-1.5 rounded-full bg-teal-600&quot;></div> Philadelphia Chapter
+                        </li>
+                        <li class=&quot;flex items-center gap-3 text-sm text-navy-900 font-medium&quot;>
+                            <div class=&quot;w-1.5 h-1.5 rounded-full bg-teal-600&quot;></div> San Francisco Chapter
+                        </li>
+                        <li class=&quot;flex items-center gap-3 text-sm text-navy-900 font-medium&quot;>
+                            <div class=&quot;w-1.5 h-1.5 rounded-full bg-teal-600&quot;></div> Kolkata Chapter
+                        </li>
+                        <li class=&quot;flex items-center gap-3 text-sm text-navy-900 font-medium&quot;>
+                            <div class=&quot;w-1.5 h-1.5 rounded-full bg-teal-600&quot;></div> U.S. India healthcare corridor
+                        </li>
+                    </ul>
+                    
+                    <div class=&quot;pt-6 border-t border-gray-200 relative z-10&quot;>
+                        <p class=&quot;text-xs text-gray-500 italic&quot;>Capital conversations occur within a trusted, curated environment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategic Partner Card -->
+            <div class=&quot;fade-up max-w-4xl mx-auto bg-white border border-gray-100 rounded-xl p-8 lg:p-10 shadow-subtle relative overflow-hidden&quot;>
+                <div class=&quot;absolute left-0 top-0 bottom-0 w-1.5 bg-gold-500&quot;></div>
+                <div class=&quot;flex flex-col md:flex-row gap-8 items-center&quot;>
+                    <div class=&quot;md:w-1/3 flex justify-center md:justify-start&quot;>
+                        <div class=&quot;w-20 h-20 bg-cream-100 rounded-full flex items-center justify-center&quot;>
+                            <i class=&quot;fa-solid fa-handshake text-gold-500 text-3xl&quot;></i>
+                        </div>
+                    </div>
+                    <div class=&quot;md:w-2/3&quot;>
+                        <span class=&quot;text-teal-600 font-bold tracking-widest text-xs uppercase mb-2 block&quot;>Strategic Capital Partner</span>
+                        <h3 class=&quot;font-heading text-2xl text-navy-900 font-bold mb-4&quot;>
+                            <span class=&quot;text-gold-500&quot;>WestBridge Capital</span>
+                        </h3>
+                        <p class=&quot;text-gray-600 text-sm leading-relaxed mb-4&quot;>
+                            GHF Ventures has established a strategic partnership with WestBridge Capital — a $7 billion evergreen fund and one of the most active institutional investors in healthcare and technology across the U.S. and India.
+                        </p>
+                        <p class=&quot;text-gray-600 text-sm leading-relaxed mb-6&quot;>
+                            WestBridge Capital funds the annual GHF Ventures Forum Prize and co structures the founder and advisory cohort program, providing expansion ready healthcare companies with access to disciplined capital, strategic guidance, and a curated network of physicians, operators, and institutional investors.
+                        </p>
+                        <div class=&quot;pt-4 border-t border-gray-100&quot;>
+                            <p class=&quot;text-xs text-gray-500 italic&quot;>
+                                WestBridge Capital invests $10M to $500M across Series A to IPO — bringing institutional depth to every GHF Ventures engagement.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: 2025 IMPACT -->
+    <section class=&quot;py-24 lg:py-32 bg-navy-900 relative overflow-hidden&quot;>
+        <!-- Decorative Elements -->
+        <div class=&quot;absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent&quot;></div>
+        <div class=&quot;absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-600/30 to-transparent&quot;></div>
+        
+        <div class=&quot;max-w-7xl mx-auto px-6 lg:px-8 relative z-10&quot;>
+            <div class=&quot;flex flex-col lg:flex-row items-center gap-16&quot;>
+	                <!-- Left: Big Stat -->
+	                <div class=&quot;lg:w-5/12 fade-up&quot;>
+	                    <span class=&quot;text-gold-500 font-bold tracking-widest text-xs uppercase mb-4 block&quot;>2025 Impact</span>
+	                    <div class=&quot;flex items-baseline gap-2 mb-4&quot;>
+	                        <span class=&quot;font-mono text-8xl lg:text-9xl text-white font-bold stat-counter&quot; data-target=&quot;16&quot;>0</span>
+	                    </div>
+	                    <h3 class=&quot;text-2xl text-white/90 font-heading mb-6&quot;>companies featured across Innovation Lab and Venture Forum.</h3>
+	                    <p class=&quot;text-white/60 text-lg leading-relaxed&quot;>
+	                        Structured engagement between clinicians, operators, and investors driving tangible outcomes.
+	                    </p>
+	                </div>
+	                
+	                <!-- Right: Details -->
+	                <div class=&quot;lg:w-7/12 fade-up delay-100&quot;>
+	                    <div class=&quot;bg-white/5 border border-white/10 rounded-2xl p-8 lg:p-12 backdrop-blur-sm&quot;>
+	                        <div class=&quot;grid grid-cols-2 md:grid-cols-3 gap-8 mb-12&quot;>
+	                            <div class=&quot;text-center&quot;>
+	                                <div class=&quot;font-mono text-4xl text-gold-500 font-bold mb-1 stat-counter&quot; data-target=&quot;425&quot; data-suffix=&quot;+&quot;>0</div>
+	                                <div class=&quot;text-white/50 text-xs uppercase tracking-widest&quot;>Attendees</div>
+	                            </div>
+	                            <div class=&quot;text-center&quot;>
+	                                <div class=&quot;font-mono text-4xl text-gold-500 font-bold mb-1 stat-counter&quot; data-target=&quot;300&quot; data-suffix=&quot;+&quot;>0</div>
+	                                <div class=&quot;text-white/50 text-xs uppercase tracking-widest&quot;>Physicians</div>
+	                            </div>
+	                            <div class=&quot;text-center&quot;>
+	                                <div class=&quot;font-mono text-4xl text-gold-500 font-bold mb-1 stat-counter&quot; data-target=&quot;75&quot;>0</div>
+	                                <div class=&quot;text-white/50 text-xs uppercase tracking-widest&quot;>Speakers</div>
+	                            </div>
+	                            <div class=&quot;text-center&quot;>
+	                                <div class=&quot;font-mono text-4xl text-gold-500 font-bold mb-1 stat-counter&quot; data-target=&quot;15&quot;>0</div>
+	                                <div class=&quot;text-white/50 text-xs uppercase tracking-widest&quot;>Countries</div>
+	                            </div>
+	                            <div class=&quot;text-center&quot;>
+	                                <div class=&quot;font-mono text-4xl text-gold-500 font-bold mb-1 stat-counter&quot; data-target=&quot;40&quot;>0</div>
+	                                <div class=&quot;text-white/50 text-xs uppercase tracking-widest&quot;>Sessions</div>
+	                            </div>
+	                            <div class=&quot;text-center&quot;>
+	                                <div class=&quot;font-mono text-4xl text-gold-500 font-bold mb-1 stat-counter&quot; data-target=&quot;25000&quot; data-prefix=&quot;$&quot;>0</div>
+	                                <div class=&quot;text-white/50 text-xs uppercase tracking-widest&quot;>Prize Awarded</div>
+	                            </div>
+	                        </div>
+
+	                        <h4 class=&quot;text-white font-heading text-xl mb-6 border-t border-white/10 pt-8&quot;>Focus Areas Represented</h4>
+	                        <div class=&quot;flex flex-wrap gap-3 mb-12&quot;>
+	                            <span class=&quot;px-4 py-2 bg-teal-600/20 text-teal-400 border border-teal-600/30 rounded-full text-sm&quot;>AI in Clinical Practice</span>
+	                            <span class=&quot;px-4 py-2 bg-teal-600/20 text-teal-400 border border-teal-600/30 rounded-full text-sm&quot;>Digital Health Infrastructure</span>
+	                            <span class=&quot;px-4 py-2 bg-teal-600/20 text-teal-400 border border-teal-600/30 rounded-full text-sm&quot;>Wellness and Longevity</span>
+	                            <span class=&quot;px-4 py-2 bg-teal-600/20 text-teal-400 border border-teal-600/30 rounded-full text-sm&quot;>Operational Efficiency</span>
+	                            <span class=&quot;px-4 py-2 bg-teal-600/20 text-teal-400 border border-teal-600/30 rounded-full text-sm&quot;>Health Equity Innovation</span>
+	                        </div>
+                        
+                        <h4 class=&quot;text-white font-heading text-xl mb-6 border-t border-white/10 pt-8&quot;>Success is measured by:</h4>
+                        <div class=&quot;grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8&quot;>
+                            <div class=&quot;flex items-center gap-3&quot;>
+                                <i class=&quot;fa-solid fa-arrow-right text-gold-500 text-sm&quot;></i>
+                                <span class=&quot;text-white/80&quot;>Strategic partnerships</span>
+                            </div>
+                            <div class=&quot;flex items-center gap-3&quot;>
+                                <i class=&quot;fa-solid fa-arrow-right text-gold-500 text-sm&quot;></i>
+                                <span class=&quot;text-white/80&quot;>Investor diligence progression</span>
+                            </div>
+                            <div class=&quot;flex items-center gap-3&quot;>
+                                <i class=&quot;fa-solid fa-arrow-right text-gold-500 text-sm&quot;></i>
+                                <span class=&quot;text-white/80&quot;>Clinical advisory alignment</span>
+                            </div>
+	                            <div class=&quot;flex items-center gap-3&quot;>
+	                                <i class=&quot;fa-solid fa-arrow-right text-gold-500 text-sm&quot;></i>
+	                                <span class=&quot;text-white/80&quot;>Cross border collaboration</span>
+	                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: VENTURE SPOTLIGHTS -->
+    <section class=&quot;py-24 lg:py-32 bg-cream-200&quot;>
+        <div class=&quot;max-w-7xl mx-auto px-6 lg:px-8&quot;>
+            <div class=&quot;fade-up text-center max-w-3xl mx-auto mb-16&quot;>
+                <span class=&quot;text-teal-600 font-bold tracking-widest text-xs uppercase mb-4 block&quot;>Venture Spotlights</span>
+                <h2 class=&quot;font-heading text-4xl md:text-5xl text-navy-900 font-bold&quot;>Outcomes Over Optics</h2>
+            </div>
+
+            <div class=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12&quot;>
+                <!-- Testimonial 1 -->
+                <div class=&quot;fade-up bg-white rounded-2xl p-8 lg:p-10 shadow-subtle relative&quot;>
+                    <i class=&quot;fa-solid fa-quote-right absolute top-8 right-8 text-4xl text-cream-200&quot;></i>
+                    
+                    <div class=&quot;mb-8&quot;>
+                        <h3 class=&quot;font-heading text-2xl text-navy-900 font-bold mb-2&quot;>Sensible</h3>
+                        <div class=&quot;h-1 w-12 bg-gold-500 rounded-full&quot;></div>
+                    </div>
+                    
+                    <p class=&quot;text-gray-600 text-sm leading-relaxed mb-8&quot;>
+                        Through strategic engagement with GHF Ventures, Sensible sharpened its commercial thesis — evolving from a single indication diagnostic model into a scalable, non invasive platform for longitudinal reproductive health monitoring. Leveraging novel biomarkers derived from menstrual cycle data, Sensible is building clinical grade diagnostic infrastructure for conditions that have historically been underserved by traditional screening pathways.
+                    </p>
+                    
+                    <div class=&quot;bg-cream-100 p-6 rounded-xl border-l-4 border-teal-600&quot;>
+                        <p class=&quot;text-navy-900 text-sm italic mb-4&quot;>
+                            GHF Ventures engagement: Strategic positioning, clinical narrative development, and institutional partner introductions.
+                        </p>
+                        <p class=&quot;text-navy-900 text-sm font-bold mb-4&quot;>
+                            Sensible was awarded the $25,000 Venture Forum Prize, funded by WestBridge Capital — the first prize of its kind within the GHF platform.
+                        </p>
+                        <p class=&quot;font-heading italic text-navy-900 mb-4&quot;>
+                            &quot;The Global Health Forum was a truly transformative experience for our team… Beyond the competition, we gained invaluable guidance and a lifelong network of physicians, leaders, and investors who genuinely want to help us make an impact.&quot;
+                        </p>
+                        <div class=&quot;flex items-center gap-3&quot;>
+                            <div class=&quot;w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center text-white font-bold text-sm&quot;>NK</div>
+                            <div>
+                                <p class=&quot;text-sm font-bold text-navy-900&quot;>Nandini Kanthi</p>
+                                <p class=&quot;text-xs text-gray-500&quot;>CEO &amp; Co Founder, Sensible</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class=&quot;fade-up delay-100 bg-white rounded-2xl p-8 lg:p-10 shadow-subtle relative&quot;>
+                    <i class=&quot;fa-solid fa-quote-right absolute top-8 right-8 text-4xl text-cream-200&quot;></i>
+                    
+                    <div class=&quot;mb-8&quot;>
+                        <h3 class=&quot;font-heading text-2xl text-navy-900 font-bold mb-2&quot;>Keendoc</h3>
+                        <div class=&quot;h-1 w-12 bg-gold-500 rounded-full&quot;></div>
+                    </div>
+                    
+                    <p class=&quot;text-gray-600 text-sm leading-relaxed mb-8&quot;>
+                        Founder engagement within Global Health Forum created direct access to senior leaders, resulting in strategic conversations with IBM and Elsevier and tangible funding and collaboration outcomes.
+                    </p>
+                    
+                    <div class=&quot;bg-cream-100 p-6 rounded-xl border-l-4 border-teal-600 mt-auto&quot;>
+                        <p class=&quot;font-heading italic text-navy-900 mb-4&quot;>
+                            &quot;What made the Global Health Forum exceptional was the openness of the environment and the ability to engage directly with senior leaders… In a very real sense, the Forum played a concrete role in moving our work forward.&quot;
+                        </p>
+                        <div class=&quot;flex items-center gap-3&quot;>
+                            <div class=&quot;w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center text-white font-bold text-sm&quot;>MH</div>
+                            <div>
+                                <p class=&quot;text-sm font-bold text-navy-900&quot;>Mireille van Hal</p>
+                                <p class=&quot;text-xs text-gray-500&quot;>Co Founder, Keendoc</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class=&quot;fade-up text-center&quot;>
+	                    <p class=&quot;text-sm text-gray-500 italic max-w-2xl mx-auto&quot;>
+	                        Selected ventures may receive strategic advisory support and non dilutive capital aligned with governance first principles. (No funding amounts disclosed.)
+	                    </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: FOCUS THEMES FOR 2026 -->
+    <section id=&quot;themes&quot; class=&quot;py-24 lg:py-32 bg-white&quot;>
+        <div class=&quot;max-w-7xl mx-auto px-6 lg:px-8&quot;>
+            <div class=&quot;fade-up flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16&quot;>
+                <div class=&quot;max-w-2xl&quot;>
+                    <span class=&quot;text-teal-600 font-bold tracking-widest text-xs uppercase mb-4 block&quot;>Focus Themes for 2026</span>
+                    <h2 class=&quot;font-heading text-4xl md:text-5xl text-navy-900 font-bold&quot;>Areas of Alignment</h2>
+                </div>
+                <div class=&quot;md:text-right max-w-sm&quot;>
+                    <p class=&quot;text-sm text-gray-500 border-l-2 md:border-l-0 md:border-r-2 border-gold-500 pl-4 md:pl-0 md:pr-4 py-1&quot;>
+                        GHF Ventures aligns directly with the broader pillars of Global Health Congress 2026.
+                    </p>
+                </div>
+            </div>
+
+            <div class=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
+                <!-- Theme 1 -->
+                <div class=&quot;fade-up group p-8 border border-gray-100 rounded-xl hover:border-teal-600/30 hover:bg-cream-100/50 transition-all duration-300&quot;>
+                    <div class=&quot;w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors&quot;>
+	                        <span class=&quot;font-mono font-bold text-xl&quot;>01</span>
+	                    </div>
+	                    <h3 class=&quot;font-heading text-xl text-navy-900 font-bold mb-3&quot;>AI in Clinical Practice and Governance</h3>
+	                    <div class=&quot;w-8 h-px bg-gray-300 group-hover:w-full group-hover:bg-teal-600 transition-all duration-500&quot;></div>
+	                </div>
+	
+	                <!-- Theme 2 -->
+	                <div class=&quot;fade-up delay-100 group p-8 border border-gray-100 rounded-xl hover:border-teal-600/30 hover:bg-cream-100/50 transition-all duration-300&quot;>
+	                    <div class=&quot;w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors&quot;>
+	                        <span class=&quot;font-mono font-bold text-xl&quot;>02</span>
+	                    </div>
+	                    <h3 class=&quot;font-heading text-xl text-navy-900 font-bold mb-3&quot;>Wellness and Longevity Science</h3>
+	                    <div class=&quot;w-8 h-px bg-gray-300 group-hover:w-full group-hover:bg-teal-600 transition-all duration-500&quot;></div>
+	                </div>
+	
+	                <!-- Theme 3 -->
+	                <div class=&quot;fade-up delay-200 group p-8 border border-gray-100 rounded-xl hover:border-teal-600/30 hover:bg-cream-100/50 transition-all duration-300&quot;>
+	                    <div class=&quot;w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors&quot;>
+	                        <span class=&quot;font-mono font-bold text-xl&quot;>03</span>
+	                    </div>
+	                    <h3 class=&quot;font-heading text-xl text-navy-900 font-bold mb-3&quot;>Health System Resilience</h3>
+	                    <div class=&quot;w-8 h-px bg-gray-300 group-hover:w-full group-hover:bg-teal-600 transition-all duration-500&quot;></div>
+	                </div>
+	
+	                <!-- Theme 4 -->
+	                <div class=&quot;fade-up group p-8 border border-gray-100 rounded-xl hover:border-teal-600/30 hover:bg-cream-100/50 transition-all duration-300&quot;>
+	                    <div class=&quot;w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors&quot;>
+	                        <span class=&quot;font-mono font-bold text-xl&quot;>04</span>
+	                    </div>
+	                    <h3 class=&quot;font-heading text-xl text-navy-900 font-bold mb-3&quot;>Scalable Infrastructure Platforms</h3>
+	                    <div class=&quot;w-8 h-px bg-gray-300 group-hover:w-full group-hover:bg-teal-600 transition-all duration-500&quot;></div>
+	                </div>
+	
+	                <!-- Theme 5 -->
+	                <div class=&quot;fade-up delay-100 group p-8 border border-gray-100 rounded-xl hover:border-teal-600/30 hover:bg-cream-100/50 transition-all duration-300&quot;>
+	                    <div class=&quot;w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors&quot;>
+	                        <span class=&quot;font-mono font-bold text-xl&quot;>05</span>
+	                    </div>
+	                    <h3 class=&quot;font-heading text-xl text-navy-900 font-bold mb-3&quot;>Equity Driven Innovation</h3>
+	                    <div class=&quot;w-8 h-px bg-gray-300 group-hover:w-full group-hover:bg-teal-600 transition-all duration-500&quot;></div>
+	                </div>
+	
+	                <!-- Theme 6 -->
+	                <div class=&quot;fade-up delay-200 group p-8 border border-gray-100 rounded-xl hover:border-teal-600/30 hover:bg-cream-100/50 transition-all duration-300&quot;>
+	                    <div class=&quot;w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors&quot;>
+	                        <span class=&quot;font-mono font-bold text-xl&quot;>06</span>
+                    </div>
+	                    <h3 class=&quot;font-heading text-xl text-navy-900 font-bold mb-3&quot;>Cross Border Healthcare Integration</h3>
+                    <div class=&quot;w-8 h-px bg-gray-300 group-hover:w-full group-hover:bg-teal-600 transition-all duration-500&quot;></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7 &amp; 8: DUAL AUDIENCE (Founders &amp; Investors) -->
+    <section class=&quot;flex flex-col lg:flex-row min-h-[80vh]&quot;>
+        <!-- FOR FOUNDERS -->
+        <div id=&quot;founders&quot; class=&quot;lg:w-1/2 bg-teal-700 text-white py-24 lg:py-32 px-6 lg:px-16 xl:px-24 flex flex-col justify-center relative overflow-hidden&quot;>
+            <div class=&quot;absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2&quot;></div>
+            
+            <div class=&quot;relative z-10 fade-up max-w-xl ml-auto lg:mr-0&quot;>
+                <span class=&quot;text-gold-400 font-bold tracking-widest text-xs uppercase mb-4 block&quot;>FOR FOUNDERS</span>
+                <h2 class=&quot;font-heading text-4xl md:text-5xl font-bold mb-8&quot;>Execution Readiness</h2>
+                
+                <p class=&quot;text-white/90 text-lg mb-8&quot;>
+                    We partner with visionary leaders navigating the transition from clinical validation to commercial scale. GHF Ventures is designed for expansion ready companies that demonstrate:
+                </p>
+                
+                <ul class=&quot;space-y-5 mb-12&quot;>
+                    <li class=&quot;flex items-start gap-4&quot;>
+                        <div class=&quot;mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0&quot;>
+                            <i class=&quot;fa-solid fa-check text-gold-400 text-xs&quot;></i>
+                        </div>
+                        <span class=&quot;text-white/90&quot;><strong>Validated Traction</strong> — Active pilots, clinical evidence, or early commercial revenue</span>
+                    </li>
+                    <li class=&quot;flex items-start gap-4&quot;>
+                        <div class=&quot;mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0&quot;>
+                            <i class=&quot;fa-solid fa-check text-gold-400 text-xs&quot;></i>
+                        </div>
+                        <span class=&quot;text-white/90&quot;><strong>Regulatory Sophistication</strong> — A clear understanding of approval pathways and reimbursement dynamics</span>
+                    </li>
+                    <li class=&quot;flex items-start gap-4&quot;>
+                        <div class=&quot;mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0&quot;>
+                            <i class=&quot;fa-solid fa-check text-gold-400 text-xs&quot;></i>
+                        </div>
+                        <span class=&quot;text-white/90&quot;><strong>System Level Ambition</strong> — Solutions designed for adoption within health systems, not around them</span>
+                    </li>
+                    <li class=&quot;flex items-start gap-4&quot;>
+                        <div class=&quot;mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0&quot;>
+                            <i class=&quot;fa-solid fa-check text-gold-400 text-xs&quot;></i>
+                        </div>
+                        <span class=&quot;text-white/90&quot;><strong>Operational Discipline</strong> — Strong governance, financial controls, and execution infrastructure</span>
+                    </li>
+                    <li class=&quot;flex items-start gap-4&quot;>
+                        <div class=&quot;mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0&quot;>
+                            <i class=&quot;fa-solid fa-check text-gold-400 text-xs&quot;></i>
+                        </div>
+                        <span class=&quot;text-white/90&quot;><strong>Global Orientation</strong> — Openness to cross border partnerships and international market development</span>
+                    </li>
+                </ul>
+                
+                <p class=&quot;text-white/90 text-lg mb-12&quot;>
+                    We provide the strategic counsel, institutional relationships, and capital network required to navigate complex growth inflection points.
+                </p>
+                
+                <a href=&quot;#contact&quot; class=&quot;inline-flex items-center justify-center px-8 py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold rounded-sm transition-all duration-300 group&quot;>
+                    Apply for 2026 Cohort
+                    <i class=&quot;fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform&quot;></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- FOR INVESTORS -->
+        <div id=&quot;investors&quot; class=&quot;lg:w-1/2 bg-navy-900 text-white py-24 lg:py-32 px-6 lg:px-16 xl:px-24 flex flex-col justify-center relative overflow-hidden&quot;>
+            <div class=&quot;absolute bottom-0 left-0 w-64 h-64 bg-teal-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2&quot;></div>
+            
+            <div class=&quot;relative z-10 fade-up delay-100 max-w-xl mr-auto lg:ml-0&quot;>
+                <span class=&quot;text-teal-400 font-bold tracking-widest text-xs uppercase mb-4 block&quot;>FOR INVESTORS</span>
+                <h2 class=&quot;font-heading text-4xl md:text-5xl font-bold mb-8&quot;>Institutional Access</h2>
+                
+                <p class=&quot;text-white/90 text-lg mb-8&quot;>
+                    GHF Ventures provides institutional investors with proprietary access to a rigorously curated portfolio of healthcare innovations — vetted through clinical, regulatory, and operational lenses before any engagement.
+                </p>
+                
+                <ul class=&quot;space-y-6 mb-12&quot;>
+                    <li class=&quot;flex items-start gap-4&quot;>
+                        <div class=&quot;mt-1 w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0&quot;></div>
+                        <span class=&quot;text-white/80 leading-relaxed&quot;><strong>Curated Access</strong> — Engage with category leading founders within the trusted Global Health Forum ecosystem, selected for clinical relevance and commercial readiness</span>
+                    </li>
+                    <li class=&quot;flex items-start gap-4&quot;>
+                        <div class=&quot;mt-1 w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0&quot;></div>
+                        <span class=&quot;text-white/80 leading-relaxed&quot;><strong>Cross Border Exposure</strong> — Strategic access to high growth U.S. India healthcare corridors, including digital health, diagnostics, and health system integration</span>
+                    </li>
+                    <li class=&quot;flex items-start gap-4&quot;>
+                        <div class=&quot;mt-1 w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0&quot;></div>
+                        <span class=&quot;text-white/80 leading-relaxed&quot;><strong>Structured Dialogue</strong> — Facilitated, high conviction engagements designed for strategic capital deployment, not volume</span>
+                    </li>
+                    <li class=&quot;flex items-start gap-4&quot;>
+                        <div class=&quot;mt-1 w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0&quot;></div>
+                        <span class=&quot;text-white/80 leading-relaxed&quot;><strong>Ecosystem Intelligence</strong> — Year round access to GHF&#39;s network of health system executives, clinical leaders, and regulatory experts</span>
+                    </li>
+                </ul>
+                
+                <div class=&quot;bg-white/5 p-5 rounded-lg border border-white/10 mb-10&quot;>
+                    <p class=&quot;font-medium text-gold-400 text-sm&quot;>
+                        We build long term capital partnerships grounded in strategic alignment and shared conviction.
+                    </p>
+                </div>
+                
+                <a href=&quot;#contact&quot; class=&quot;inline-flex items-center justify-center px-8 py-4 border border-gold-500 text-gold-500 hover:bg-gold-500/10 font-semibold rounded-sm transition-all duration-300 group&quot;>
+                    Request Investor Access
+                    <i class=&quot;fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform&quot;></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: CONGRESS 2026 -->
+    <section id=&quot;congress&quot; class=&quot;py-24 lg:py-32 bg-cream-200 relative&quot;>
+        <div class=&quot;max-w-5xl mx-auto px-6 lg:px-8&quot;>
+            <div class=&quot;bg-white rounded-2xl shadow-card overflow-hidden flex flex-col md:flex-row&quot;>
+                <!-- Image/Graphic Side -->
+                <div class=&quot;md:w-2/5 bg-navy-900 relative p-10 flex flex-col justify-between min-h-[300px]&quot;>
+                    <div class=&quot;absolute inset-0 bg-pattern-lines opacity-20&quot;></div>
+                    <div class=&quot;relative z-10&quot;>
+                        <div class=&quot;w-12 h-12 bg-gold-500 rounded-sm flex items-center justify-center mb-6&quot;>
+                            <i class=&quot;fa-solid fa-building-columns text-navy-900 text-xl&quot;></i>
+                        </div>
+                        <h3 class=&quot;font-heading text-3xl text-white font-bold mb-2&quot;>Global Health Congress</h3>
+                        <p class=&quot;text-gold-400 font-medium&quot;>2026</p>
+                    </div>
+                    
+                    <div class=&quot;relative z-10 mt-12&quot;>
+                        <div class=&quot;flex items-center gap-3 text-white/80 mb-3&quot;>
+                            <i class=&quot;fa-regular fa-calendar text-gold-500 w-5&quot;></i>
+                            <span>October 9–11, 2026</span>
+                        </div>
+                        <div class=&quot;flex items-center gap-3 text-white/80&quot;>
+                            <i class=&quot;fa-solid fa-location-dot text-gold-500 w-5&quot;></i>
+                            <span>Yale Club, New York City</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content Side -->
+                <div class=&quot;md:w-3/5 p-10 lg:p-16 flex flex-col justify-center&quot;>
+                    <span class=&quot;text-teal-600 font-bold tracking-widest text-xs uppercase mb-4 block&quot;>GHF Ventures At</span>
+                    <h2 class=&quot;font-heading text-3xl text-navy-900 font-bold mb-6&quot;>The Venture &amp; Investment Forum</h2>
+                    
+                    <p class=&quot;text-gray-600 mb-4 font-medium&quot;>Takes place on October 11.</p>
+                    
+	                    <p class=&quot;text-gray-600 leading-relaxed mb-10&quot;>
+	                        Selected ventures engage with institutional investors, health system leaders, and cross border partners in a curated environment designed for disciplined capital alignment.
+	                    </p>
+                    
+                    <div class=&quot;flex flex-col sm:flex-row gap-4&quot;>
+                        <a href=&quot;#contact&quot; class=&quot;px-6 py-3 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold rounded-sm transition-all duration-300 text-center&quot;>
+                            Apply Now for Congress 2026
+                        </a>
+                        <a href=&quot;#&quot; class=&quot;px-6 py-3 border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white font-semibold rounded-sm transition-all duration-300 text-center group&quot;>
+                            View Congress
+                            <i class=&quot;fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform&quot;></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: INTEGRATION -->
+    <section id=&quot;integration&quot; class=&quot;py-24 lg:py-32 bg-white border-t border-gray-100&quot;>
+        <div class=&quot;max-w-7xl mx-auto px-6 lg:px-8&quot;>
+            <div class=&quot;flex flex-col lg:flex-row items-center gap-16&quot;>
+                <div class=&quot;lg:w-1/2 fade-up&quot;>
+                    <span class=&quot;text-teal-600 font-bold tracking-widest text-xs uppercase mb-4 block&quot;>Integration</span>
+                    <h2 class=&quot;font-heading text-4xl md:text-5xl text-navy-900 font-bold mb-6&quot;>The Global Health Forum Ecosystem</h2>
+                    
+                    <p class=&quot;text-gray-600 text-lg mb-8&quot;>
+                        GHF Ventures operates within the broader Global Health Forum ecosystem. This provides ventures with access to a comprehensive network of resources and relationships.
+                    </p>
+                    
+                    <div class=&quot;grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10&quot;>
+                        <div class=&quot;flex items-center gap-3 p-3 bg-cream-100 rounded-lg&quot;>
+                            <i class=&quot;fa-solid fa-map-location-dot text-teal-600&quot;></i>
+                            <span class=&quot;text-navy-900 font-medium text-sm&quot;>Regional chapters</span>
+                        </div>
+                        <div class=&quot;flex items-center gap-3 p-3 bg-cream-100 rounded-lg&quot;>
+                            <i class=&quot;fa-solid fa-handshake-angle text-teal-600&quot;></i>
+                            <span class=&quot;text-navy-900 font-medium text-sm&quot;>International partnerships</span>
+                        </div>
+                        <div class=&quot;flex items-center gap-3 p-3 bg-cream-100 rounded-lg&quot;>
+                            <i class=&quot;fa-solid fa-landmark text-teal-600&quot;></i>
+                            <span class=&quot;text-navy-900 font-medium text-sm&quot;>Policy dialogue</span>
+                        </div>
+                        <div class=&quot;flex items-center gap-3 p-3 bg-cream-100 rounded-lg&quot;>
+                            <i class=&quot;fa-solid fa-scale-unbalanced text-teal-600&quot;></i>
+                            <span class=&quot;text-navy-900 font-medium text-sm&quot;>Nonprofit &amp; equity integration</span>
+                        </div>
+                        <div class=&quot;flex items-center gap-3 p-3 bg-cream-100 rounded-lg sm:col-span-2&quot;>
+                            <i class=&quot;fa-solid fa-eye text-teal-600&quot;></i>
+                            <span class=&quot;text-navy-900 font-medium text-sm&quot;>Congress visibility</span>
+                        </div>
+                    </div>
+                    
+                    <a href=&quot;#&quot; class=&quot;inline-flex items-center justify-center px-8 py-4 border-2 border-teal-600 text-teal-700 hover:bg-teal-600 hover:text-white font-semibold rounded-sm transition-all duration-300 group&quot;>
+                        Visit Global Health Forum
+                        <i class=&quot;fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform&quot;></i>
+                    </a>
+                </div>
+                
+                <div class=&quot;lg:w-1/2 fade-up delay-100 w-full&quot;>
+                    <div class=&quot;bg-navy-900 p-10 lg:p-16 rounded-2xl relative overflow-hidden shadow-card&quot;>
+                        <div class=&quot;absolute top-0 right-0 w-full h-full bg-pattern-dots opacity-10&quot;></div>
+                        <div class=&quot;absolute -bottom-10 -right-10 w-40 h-40 bg-gold-500/20 rounded-full blur-2xl&quot;></div>
+                        
+                        <i class=&quot;fa-solid fa-quote-left text-4xl text-gold-500/30 mb-6&quot;></i>
+                        <h3 class=&quot;font-heading text-3xl md:text-4xl text-white font-bold leading-tight relative z-10&quot;>
+                            Innovation is embedded within infrastructure — not isolated from it.
+                        </h3>
+                        <div class=&quot;mt-8 w-16 h-1 bg-gold-500&quot;></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 11: FAQ -->
+    <section class=&quot;py-24 lg:py-32 bg-gray-50&quot;>
+        <div class=&quot;max-w-3xl mx-auto px-6 lg:px-8&quot;>
+            <div class=&quot;fade-up text-center mb-16&quot;>
+                <span class=&quot;text-teal-600 font-bold tracking-widest text-xs uppercase mb-4 block&quot;>FAQ</span>
+                <h2 class=&quot;font-heading text-4xl text-navy-900 font-bold&quot;>Frequently Asked Questions</h2>
+            </div>
+
+            <div class=&quot;space-y-4 fade-up delay-100&quot;>
+                <!-- FAQ Item 1 -->
+                <div class=&quot;bg-white border border-gray-200 rounded-lg overflow-hidden&quot;>
+                    <button class=&quot;accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none&quot;>
+                        <span class=&quot;font-semibold text-navy-900 pr-8&quot;>What is GHF Ventures?</span>
+                        <i class=&quot;fa-solid fa-plus text-teal-600 transition-transform duration-300&quot;></i>
+                    </button>
+                    <div class=&quot;accordion-content bg-gray-50/50 px-6&quot;>
+                        <p class=&quot;text-gray-600 pb-5 text-sm leading-relaxed&quot;>
+                            A curated capital and governance alignment platform within the Global Health Forum.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class=&quot;bg-white border border-gray-200 rounded-lg overflow-hidden&quot;>
+                    <button class=&quot;accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none&quot;>
+                        <span class=&quot;font-semibold text-navy-900 pr-8&quot;>Is GHF Ventures an accelerator?</span>
+                        <i class=&quot;fa-solid fa-plus text-teal-600 transition-transform duration-300&quot;></i>
+                    </button>
+	                    <div class=&quot;accordion-content bg-gray-50/50 px-6&quot;>
+	                        <p class=&quot;text-gray-600 pb-5 text-sm leading-relaxed&quot;>
+	                            No. It is not a cohort based accelerator. It is a selective capital alignment ecosystem that also operates focused accelerator programs addressing specific gaps in healthcare.
+	                        </p>
+	                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class=&quot;bg-white border border-gray-200 rounded-lg overflow-hidden&quot;>
+                    <button class=&quot;accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none&quot;>
+                        <span class=&quot;font-semibold text-navy-900 pr-8&quot;>Does GHF Ventures take equity?</span>
+                        <i class=&quot;fa-solid fa-plus text-teal-600 transition-transform duration-300&quot;></i>
+                    </button>
+                    <div class=&quot;accordion-content bg-gray-50/50 px-6&quot;>
+                        <p class=&quot;text-gray-600 pb-5 text-sm leading-relaxed&quot;>
+                            There is no standard equity model. Engagement is relationship driven and structured case by case.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class=&quot;bg-white border border-gray-200 rounded-lg overflow-hidden&quot;>
+                    <button class=&quot;accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none&quot;>
+                        <span class=&quot;font-semibold text-navy-900 pr-8&quot;>What stage companies are appropriate?</span>
+                        <i class=&quot;fa-solid fa-plus text-teal-600 transition-transform duration-300&quot;></i>
+                    </button>
+                    <div class=&quot;accordion-content bg-gray-50/50 px-6&quot;>
+                        <p class=&quot;text-gray-600 pb-5 text-sm leading-relaxed&quot;>
+                            Companies with measurable traction or validated pilots.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class=&quot;bg-white border border-gray-200 rounded-lg overflow-hidden&quot;>
+	                    <button class=&quot;accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none&quot;>
+	                        <span class=&quot;font-semibold text-navy-900 pr-8&quot;>Is participation limited to U.S. based ventures?</span>
+	                        <i class=&quot;fa-solid fa-plus text-teal-600 transition-transform duration-300&quot;></i>
+	                    </button>
+                    <div class=&quot;accordion-content bg-gray-50/50 px-6&quot;>
+	                        <p class=&quot;text-gray-600 pb-5 text-sm leading-relaxed&quot;>
+	                            No. GHF Ventures supports international collaboration, including U.S. India corridor engagement.
+	                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class=&quot;bg-white border border-gray-200 rounded-lg overflow-hidden&quot;>
+                    <button class=&quot;accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none&quot;>
+                        <span class=&quot;font-semibold text-navy-900 pr-8&quot;>Is funding guaranteed?</span>
+                        <i class=&quot;fa-solid fa-plus text-teal-600 transition-transform duration-300&quot;></i>
+                    </button>
+                    <div class=&quot;accordion-content bg-gray-50/50 px-6&quot;>
+                        <p class=&quot;text-gray-600 pb-5 text-sm leading-relaxed&quot;>
+                            No. Capital alignment occurs through structured engagement with investors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 12: CONTACT FORM -->
+    <section id=&quot;contact&quot; class=&quot;py-24 lg:py-32 bg-navy-900 relative overflow-hidden&quot;>
+        <div class=&quot;absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent&quot;></div>
+        <div class=&quot;absolute top-0 right-0 w-[600px] h-[600px] bg-teal-600/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3&quot;></div>
+        
+        <div class=&quot;max-w-3xl mx-auto px-6 lg:px-8 relative z-10&quot;>
+            <div class=&quot;fade-up text-center mb-12&quot;>
+                <span class=&quot;text-gold-500 font-bold tracking-widest text-xs uppercase mb-4 block&quot;>GET IN TOUCH</span>
+                <h2 class=&quot;font-heading text-4xl md:text-5xl text-white font-bold mb-6&quot;>Begin the Conversation</h2>
+                <p class=&quot;text-white/70 text-lg leading-relaxed&quot;>
+                    Whether you are a founder seeking strategic engagement or an institutional investor looking for curated access, we would like to hear from you.
+                </p>
+            </div>
+
+            <div class=&quot;fade-up delay-100 bg-white rounded-2xl shadow-card p-8 lg:p-10&quot;>
+                <!-- Role Selector -->
+                <div class=&quot;flex flex-col sm:flex-row gap-4 mb-10&quot;>
+                    <button id=&quot;btn-founder&quot; class=&quot;flex-1 py-3 px-6 rounded-lg font-semibold text-sm transition-all duration-300 bg-gold-500 text-navy-900 border-2 border-gold-500&quot;>
+                        I am a Founder
+                    </button>
+                    <button id=&quot;btn-investor&quot; class=&quot;flex-1 py-3 px-6 rounded-lg font-semibold text-sm transition-all duration-300 bg-transparent text-navy-900 border-2 border-gray-200 hover:border-gold-500&quot;>
+                        I am an Investor
+                    </button>
+                </div>
+
+                <!-- Founder Form -->
+                <form id=&quot;form-founder&quot; class=&quot;block&quot;>
+                    <div class=&quot;mb-5&quot;>
+                        <label class=&quot;block text-sm font-semibold text-navy-900 mb-1&quot;>Full Name</label>
+                        <input type=&quot;text&quot; required class=&quot;w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow&quot;>
+                    </div>
+                    <div class=&quot;mb-5&quot;>
+                        <label class=&quot;block text-sm font-semibold text-navy-900 mb-1&quot;>Email Address</label>
+                        <input type=&quot;email&quot; required class=&quot;w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow&quot;>
+                    </div>
+                    <div class=&quot;mb-5&quot;>
+                        <label class=&quot;block text-sm font-semibold text-navy-900 mb-1&quot;>Company Name</label>
+                        <input type=&quot;text&quot; required class=&quot;w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow&quot;>
+                    </div>
+                    <div class=&quot;mb-5&quot;>
+                        <label class=&quot;block text-sm font-semibold text-navy-900 mb-1&quot;>Company Website <span class=&quot;text-gray-400 font-normal&quot;>(Optional)</span></label>
+                        <input type=&quot;url&quot; class=&quot;w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow&quot;>
+                    </div>
+                    <div class=&quot;mb-5&quot;>
+                        <label class=&quot;block text-sm font-semibold text-navy-900 mb-1&quot;>Stage</label>
+                        <select required class=&quot;w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow bg-white&quot;>
+                            <option value=&quot;&quot; disabled selected>Select your current stage</option>
+                            <option value=&quot;pre-revenue&quot;>Pre Revenue / Pilot</option>
+                            <option value=&quot;early-revenue&quot;>Early Revenue</option>
+                            <option value=&quot;growth&quot;>Growth Stage</option>
+                            <option value=&quot;series-a&quot;>Series A+</option>
+                        </select>
+                    </div>
+                    <div class=&quot;mb-8&quot;>
+                        <label class=&quot;block text-sm font-semibold text-navy-900 mb-1&quot;>Brief Description of Your Company</label>
+                        <textarea required rows=&quot;4&quot; placeholder=&quot;What problem are you solving and what traction do you have?&quot; class=&quot;w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow resize-none&quot;></textarea>
+                    </div>
+                    <button type=&quot;button&quot; class=&quot;w-full py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-lg transition-colors duration-300&quot;>
+                        Submit Founder Application
+                    </button>
+                </form>
+
+                <!-- Investor Form -->
+                <form id=&quot;form-investor&quot; class=&quot;hidden&quot;>
+                    <div class=&quot;mb-5&quot;>
+                        <label class=&quot;block text-sm font-semibold text-navy-900 mb-1&quot;>Full Name</label>
+                        <input type=&quot;text&quot; required class=&quot;w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow&quot;>
+                    </div>
+                    <div class=&quot;mb-5&quot;>
+                        <label class=&quot;block text-sm font-semibold text-navy-900 mb-1&quot;>Email Address</label>
+                        <input type=&quot;email&quot; required class=&quot;w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow&quot;>
+                    </div>
+                    <div class=&quot;mb-5&quot;>
+                        <label class=&quot;block text-sm font-semibold text-navy-900 mb-1&quot;>Organization / Firm</label>
+                        <input type=&quot;text&quot; required class=&quot;w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow&quot;>
+                    </div>
+                    <div class=&quot;mb-5&quot;>
+                        <label class=&quot;block text-sm font-semibold text-navy-900 mb-1&quot;>Role / Title</label>
+                        <input type=&quot;text&quot; required class=&quot;w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow&quot;>
+                    </div>
+                    <div class=&quot;mb-5&quot;>
+                        <label class=&quot;block text-sm font-semibold text-navy-900 mb-3&quot;>Areas of Interest</label>
+                        <div class=&quot;grid grid-cols-1 sm:grid-cols-2 gap-3&quot;>
+                            <label class=&quot;flex items-center gap-3 cursor-pointer group&quot;>
+                                <input type=&quot;checkbox&quot; class=&quot;w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600&quot;>
+                                <span class=&quot;text-sm text-gray-700 group-hover:text-navy-900 transition-colors&quot;>AI in Clinical Practice</span>
+                            </label>
+                            <label class=&quot;flex items-center gap-3 cursor-pointer group&quot;>
+                                <input type=&quot;checkbox&quot; class=&quot;w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600&quot;>
+                                <span class=&quot;text-sm text-gray-700 group-hover:text-navy-900 transition-colors&quot;>Digital Health Infrastructure</span>
+                            </label>
+                            <label class=&quot;flex items-center gap-3 cursor-pointer group&quot;>
+                                <input type=&quot;checkbox&quot; class=&quot;w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600&quot;>
+                                <span class=&quot;text-sm text-gray-700 group-hover:text-navy-900 transition-colors&quot;>Wellness and Longevity</span>
+                            </label>
+                            <label class=&quot;flex items-center gap-3 cursor-pointer group&quot;>
+                                <input type=&quot;checkbox&quot; class=&quot;w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600&quot;>
+                                <span class=&quot;text-sm text-gray-700 group-hover:text-navy-900 transition-colors&quot;>Cross Border Healthcare</span>
+                            </label>
+                            <label class=&quot;flex items-center gap-3 cursor-pointer group&quot;>
+                                <input type=&quot;checkbox&quot; class=&quot;w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600&quot;>
+                                <span class=&quot;text-sm text-gray-700 group-hover:text-navy-900 transition-colors&quot;>Health Equity Innovation</span>
+                            </label>
+                            <label class=&quot;flex items-center gap-3 cursor-pointer group&quot;>
+                                <input type=&quot;checkbox&quot; class=&quot;w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600&quot;>
+                                <span class=&quot;text-sm text-gray-700 group-hover:text-navy-900 transition-colors&quot;>Operational Efficiency</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class=&quot;mb-8&quot;>
+                        <label class=&quot;block text-sm font-semibold text-navy-900 mb-1&quot;>Message <span class=&quot;text-gray-400 font-normal&quot;>(Optional)</span></label>
+                        <textarea rows=&quot;3&quot; placeholder=&quot;Tell us about your investment focus and what you are looking for.&quot; class=&quot;w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow resize-none&quot;></textarea>
+                    </div>
+                    <button type=&quot;button&quot; class=&quot;w-full py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-lg transition-colors duration-300&quot;>
+                        Request Investor Access
+                    </button>
+                </form>
+
+                <p class=&quot;text-center text-gray-500 text-xs italic mt-6&quot;>
+                    We review all submissions personally. You will hear from us within 5 business days.
+                </p>
+            </div>
+
+            <div class=&quot;fade-up delay-200 text-center mt-10&quot;>
+                <p class=&quot;text-white/50 text-sm mb-2&quot;>Prefer to reach out directly?</p>
+                <p class=&quot;text-gold-500 text-sm font-medium&quot;>
+                    <a href=&quot;mailto:gautam_bazaz@hotmail.com&quot; class=&quot;hover:text-gold-400 transition-colors&quot;>gautam_bazaz@hotmail.com</a>
+                    <span class=&quot;mx-2 text-white/30&quot;>&amp;middot;</span>
+                    <a href=&quot;mailto:nikkibajaj@hopeoncologynj.com&quot; class=&quot;hover:text-gold-400 transition-colors&quot;>nikkibajaj@hopeoncologynj.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class=&quot;bg-navy-900 pt-16 pb-8 border-t border-white/10&quot;>
+        <div class=&quot;max-w-7xl mx-auto px-6 lg:px-8&quot;>
+            <div class=&quot;flex flex-col md:flex-row justify-between items-center gap-8 mb-12&quot;>
+                <!-- Left -->
+                <div class=&quot;flex items-center gap-3&quot;>
+                    <div class=&quot;w-8 h-8 bg-gold-500 rounded-sm flex items-center justify-center&quot;>
+                        <i class=&quot;fa-solid fa-vault text-navy-900 text-sm&quot;></i>
+                    </div>
+                    <div>
+                        <span class=&quot;font-heading font-bold text-lg tracking-wider text-white block&quot;>GHF VENTURES</span>
+                        <span class=&quot;text-white/50 text-xs uppercase tracking-widest&quot;>The Innovation &amp; Capital Arm of Global Health Forum</span>
+                    </div>
+                </div>
+                
+                <!-- Center Links -->
+                <div class=&quot;flex flex-wrap justify-center gap-6 md:gap-8&quot;>
+                    <a href=&quot;#contact&quot; class=&quot;text-white/70 hover:text-gold-500 text-sm font-medium transition-colors&quot;>Apply as Founder</a>
+                    <a href=&quot;#contact&quot; class=&quot;text-white/70 hover:text-gold-500 text-sm font-medium transition-colors&quot;>Connect as Investor</a>
+                    <a href=&quot;#integration&quot; class=&quot;text-white/70 hover:text-gold-500 text-sm font-medium transition-colors&quot;>About Global Health Forum</a>
+                </div>
+            </div>
+            
+            <div class=&quot;border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4&quot;>
+                <p class=&quot;text-white/40 text-xs&quot;>
+                    &amp;copy; 2026 Global Health Forum. All rights reserved.
+                </p>
+                <div class=&quot;flex gap-4&quot;>
+                    <a href=&quot;#&quot; class=&quot;text-white/40 hover:text-white transition-colors&quot;><i class=&quot;fa-brands fa-linkedin&quot;></i></a>
+                    <a href=&quot;#&quot; class=&quot;text-white/40 hover:text-white transition-colors&quot;><i class=&quot;fa-brands fa-twitter&quot;></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        document.addEventListener(&#39;DOMContentLoaded&#39;, () => {
+            // 1. Scroll Animations (Intersection Observer)
+            const observerOptions = {
+                root: null,
+                rootMargin: &#39;0px&#39;,
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(&#39;visible&#39;);
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+	            document.querySelectorAll(&#39;.fade-up&#39;).forEach(el => {
+	                observer.observe(el);
+	            });
+
+	            // 1.1 Count-up Animation
+	            const countUpObserver = new IntersectionObserver((entries) => {
+	                entries.forEach(entry => {
+	                    if (entry.isIntersecting) {
+	                        const el = entry.target;
+	                        const target = parseInt(el.getAttribute(&#39;data-target&#39;));
+	                        const suffix = el.getAttribute(&#39;data-suffix&#39;) || &#39;&#39;;
+	                        const prefix = el.getAttribute(&#39;data-prefix&#39;) || &#39;&#39;;
+	                        const duration = 2000; // 2 seconds
+	                        const startTime = performance.now();
+
+	                        const updateCount = (currentTime) => {
+	                            const elapsed = currentTime - startTime;
+	                            const progress = Math.min(elapsed / duration, 1);
+	                            
+	                            // Ease-out-quart
+	                            const easeProgress = 1 - Math.pow(1 - progress, 4);
+	                            const currentCount = Math.floor(easeProgress * target);
+	                            
+	                            // Format number with commas if it&#39;s the prize
+	                            const formattedCount = target > 999 ? currentCount.toLocaleString() : currentCount;
+	                            
+	                            el.textContent = prefix + formattedCount + (progress === 1 ? suffix : &#39;&#39;);
+
+	                            if (progress < 1) {
+	                                requestAnimationFrame(updateCount);
+	                            }
+	                        };
+
+	                        requestAnimationFrame(updateCount);
+	                        countUpObserver.unobserve(el);
+	                    }
+	                });
+	            }, { threshold: 0.3 });
+
+	            document.querySelectorAll(&#39;.stat-counter&#39;).forEach(el => {
+	                countUpObserver.observe(el);
+	            });
+
+            // 2. Navbar Scroll Effect
+            const navbar = document.getElementById(&#39;navbar&#39;);
+            const logoText = document.querySelector(&#39;.logo-text&#39;);
+            
+            window.addEventListener(&#39;scroll&#39;, () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add(&#39;nav-scrolled&#39;);
+                } else {
+                    navbar.classList.remove(&#39;nav-scrolled&#39;);
+                }
+            });
+
+            // 3. Mobile Menu Toggle
+            const mobileBtn = document.getElementById(&#39;mobile-menu-btn&#39;);
+            const mobileMenu = document.getElementById(&#39;mobile-menu&#39;);
+            const hamburgerLines = document.querySelectorAll(&#39;.hamburger-line&#39;);
+            const mobileLinks = document.querySelectorAll(&#39;.mobile-link&#39;);
+            let isMenuOpen = false;
+
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+                
+                if (isMenuOpen) {
+                    // Open menu
+                    mobileMenu.classList.remove(&#39;opacity-0&#39;, &#39;pointer-events-none&#39;);
+                    mobileMenu.classList.add(&#39;opacity-100&#39;, &#39;pointer-events-auto&#39;);
+                    document.body.style.overflow = &#39;hidden&#39;; // Prevent scrolling
+                    
+                    // Animate hamburger to X
+                    hamburgerLines[0].style.transform = &#39;rotate(45deg) translate(5px, 5px)&#39;;
+                    hamburgerLines[1].style.opacity = &#39;0&#39;;
+                    hamburgerLines[2].style.transform = &#39;rotate(-45deg) translate(5px, -5px)&#39;;
+                    
+                    // Ensure lines are white when menu is open regardless of scroll
+                    hamburgerLines.forEach(line => line.style.backgroundColor = &#39;#FFFFFF&#39;);
+                    logoText.style.color = &#39;#FFFFFF&#39;;
+                } else {
+                    // Close menu
+                    mobileMenu.classList.add(&#39;opacity-0&#39;, &#39;pointer-events-none&#39;);
+                    mobileMenu.classList.remove(&#39;opacity-100&#39;, &#39;pointer-events-auto&#39;);
+                    document.body.style.overflow = &#39;&#39;; // Restore scrolling
+                    
+                    // Reset hamburger
+                    hamburgerLines[0].style.transform = &#39;none&#39;;
+                    hamburgerLines[1].style.opacity = &#39;1&#39;;
+                    hamburgerLines[2].style.transform = &#39;none&#39;;
+                    
+                    // Restore colors based on scroll position
+                    if (window.scrollY > 50) {
+                        hamburgerLines.forEach(line => line.style.backgroundColor = &#39;#0A1628&#39;);
+                        logoText.style.color = &#39;#0A1628&#39;;
+                    }
+                }
+            }
+
+            mobileBtn.addEventListener(&#39;click&#39;, toggleMenu);
+
+            // Close mobile menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener(&#39;click&#39;, () => {
+                    if (isMenuOpen) toggleMenu();
+                });
+            });
+
+            // 4. FAQ Accordion
+            const accordionBtns = document.querySelectorAll(&#39;.accordion-btn&#39;);
+            
+            accordionBtns.forEach(btn => {
+                btn.addEventListener(&#39;click&#39;, function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector(&#39;i&#39;);
+                    const isOpen = content.classList.contains(&#39;open&#39;);
+                    
+                    // Close all other accordions (optional, remove if you want multiple open)
+                    document.querySelectorAll(&#39;.accordion-content&#39;).forEach(c => {
+                        c.classList.remove(&#39;open&#39;);
+                    });
+                    document.querySelectorAll(&#39;.accordion-btn i&#39;).forEach(i => {
+                        i.style.transform = &#39;rotate(0deg)&#39;;
+                    });
+                    
+                    // Toggle current
+                    if (!isOpen) {
+                        content.classList.add(&#39;open&#39;);
+                        icon.style.transform = &#39;rotate(45deg)&#39;;
+                    }
+                });
+            });
+
+            // 5. Contact Form Role Toggle
+            const btnFounder = document.getElementById(&#39;btn-founder&#39;);
+            const btnInvestor = document.getElementById(&#39;btn-investor&#39;);
+            const formFounder = document.getElementById(&#39;form-founder&#39;);
+            const formInvestor = document.getElementById(&#39;form-investor&#39;);
+
+            if (btnFounder &amp;&amp; btnInvestor &amp;&amp; formFounder &amp;&amp; formInvestor) {
+                btnFounder.addEventListener(&#39;click&#39;, () => {
+                    // Update buttons
+                    btnFounder.className = &#39;flex-1 py-3 px-6 rounded-lg font-semibold text-sm transition-all duration-300 bg-gold-500 text-navy-900 border-2 border-gold-500&#39;;
+                    btnInvestor.className = &#39;flex-1 py-3 px-6 rounded-lg font-semibold text-sm transition-all duration-300 bg-transparent text-navy-900 border-2 border-gray-200 hover:border-gold-500&#39;;
+                    
+                    // Update forms
+                    formFounder.classList.remove(&#39;hidden&#39;);
+                    formFounder.classList.add(&#39;block&#39;);
+                    formInvestor.classList.remove(&#39;block&#39;);
+                    formInvestor.classList.add(&#39;hidden&#39;);
+                });
+
+                btnInvestor.addEventListener(&#39;click&#39;, () => {
+                    // Update buttons
+                    btnInvestor.className = &#39;flex-1 py-3 px-6 rounded-lg font-semibold text-sm transition-all duration-300 bg-gold-500 text-navy-900 border-2 border-gold-500&#39;;
+                    btnFounder.className = &#39;flex-1 py-3 px-6 rounded-lg font-semibold text-sm transition-all duration-300 bg-transparent text-navy-900 border-2 border-gray-200 hover:border-gold-500&#39;;
+                    
+                    // Update forms
+                    formInvestor.classList.remove(&#39;hidden&#39;);
+                    formInvestor.classList.add(&#39;block&#39;);
+                    formFounder.classList.remove(&#39;block&#39;);
+                    formFounder.classList.add(&#39;hidden&#39;);
+                });
+            }
+        });
+    </script>
+</body>
+</html>"></iframe>
+<script src="https://gw-tk.tanka.ai/npc/v1/file/static/app-launcher.js"></script>
+<script>
+  function handleTankaTryNowClick(event) {
+    if (window.AppLauncher) {
+      AppLauncher.handleTryNowClick(event);
+    } else {
+      // Fallback: open desktop website in new tab
+      event.preventDefault();
+      window.open('https://www.tanka.ai', '_blank');
+    }
+  }
+</script>
+</body>
+</html>
