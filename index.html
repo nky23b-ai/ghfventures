@@ -92,13 +92,19 @@
         /* Custom Animations */
         .fade-up {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(24px);
+            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .fade-up.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* Hero elements always visible — no animation on above-fold content */
+        .hero-visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
         }
 
         .delay-100 { transition-delay: 100ms; }
@@ -216,35 +222,35 @@
 
         <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full py-20">
             <div class="max-w-4xl">
-                <div class="fade-up flex items-center gap-4 mb-8">
+                <div class="hero-visible fade-up flex items-center gap-4 mb-8">
                     <div class="h-px w-12 bg-gold-500"></div>
                     <span class="text-gold-500 font-medium tracking-widest text-sm uppercase">The Innovation & Capital Arm of Global Health Forum</span>
                 </div>
                 
-                <h1 class="fade-up delay-100 font-heading text-5xl md:text-7xl lg:text-8xl text-white font-bold leading-tight mb-6">
-                    GHF <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60">VENTURES</span>
+                <h1 class="hero-visible fade-up font-heading text-5xl md:text-7xl lg:text-8xl text-white font-bold leading-tight mb-6">
+                    GHF <br/><span class="text-white">VENTURES</span>
                 </h1>
                 
-                <h2 class="fade-up delay-200 text-xl md:text-3xl text-white/90 font-heading font-medium mb-8 max-w-3xl leading-snug">
+                <h2 class="hero-visible fade-up text-xl md:text-3xl text-white/90 font-heading font-medium mb-8 max-w-3xl leading-snug">
                     Where Clinical Innovation Meets Institutional Capital
                 </h2>
                 
-                <p class="fade-up delay-300 text-lg text-white/70 mb-10 max-w-2xl leading-relaxed font-light">
-                    GHF Ventures is a year round strategic platform connecting expansion ready healthcare companies with disciplined institutional capital. Operating within the Global Health Forum ecosystem, we facilitate structured financing dialogues, governance aligned partnerships, and cross border growth strategies for companies building the next generation of scalable health solutions.
+                <p class="hero-visible fade-up text-lg text-white/70 mb-10 max-w-2xl leading-relaxed font-light">
+                    GHF Ventures connects expansion ready healthcare companies with institutional capital, clinical operators, and cross border scale. The innovation and capital arm of the Global Health Forum.
                 </p>
                 
-                <div class="fade-up delay-300 mb-12 border-l-2 border-gold-500 pl-6 py-2">
+                <div class="hero-visible fade-up mb-12 border-l-2 border-gold-500 pl-6 py-2">
                     <p class="text-gold-400 font-heading italic text-xl">
                         Anchored in the Global Health Forum. Activated annually at Global Health Congress.
                     </p>
                 </div>
                 
-                <div class="fade-up delay-300 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                <div class="hero-visible fade-up flex flex-col sm:flex-row items-start sm:items-center gap-6">
                     <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold rounded-sm transition-all duration-300 text-center shadow-[0_0_20px_rgba(201,168,76,0.3)] hover:shadow-[0_0_30px_rgba(201,168,76,0.5)] hover:-translate-y-1">
                         Apply as Founder
                     </a>
                     <a href="#contact" class="w-full sm:w-auto px-8 py-4 border border-gold-500 text-gold-500 hover:bg-gold-500/10 font-semibold rounded-sm transition-all duration-300 text-center hover:-translate-y-1">
-                        Connect as Investor
+                        Partner as Investor
                     </a>
                     <a href="#integration" class="w-full sm:w-auto text-white/60 hover:text-white text-sm font-medium transition-colors flex items-center justify-center sm:justify-start gap-2 mt-4 sm:mt-0 group">
                         About Global Health Forum 
@@ -275,7 +281,7 @@
                             Closing the <br>Alignment Gap
                         </h2>
                         <p class="text-gray-600 text-lg leading-relaxed mb-8">
-                            Transformative healthcare innovation fails not because of technology — but because of misalignment. Between clinical reality and capital strategy. Between regulatory frameworks and operational execution. Between the ambition to scale and the infrastructure to do it.
+                            Transformative healthcare innovation fails not because of technology, but because of misalignment. Between clinical reality and capital strategy. Between regulatory frameworks and operational execution. Between the ambition to scale and the infrastructure to do it.
                         </p>
                         <div class="p-6 bg-white border-l-4 border-teal-600 shadow-subtle rounded-r-lg">
                             <p class="text-navy-900 font-semibold text-lg">
@@ -454,14 +460,14 @@
                             <span class="text-gold-500">WestBridge Capital</span>
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            GHF Ventures has established a strategic partnership with WestBridge Capital — a $7 billion evergreen fund and one of the most active institutional investors in healthcare and technology across the U.S. and India.
+                            GHF Ventures has established a strategic partnership with WestBridge Capital, a $7 billion evergreen fund and one of the most active institutional investors in healthcare and technology across the U.S. and India.
                         </p>
                         <p class="text-gray-600 text-sm leading-relaxed mb-6">
                             WestBridge Capital funds the annual GHF Ventures Forum Prize and co structures the founder and advisory cohort program, providing expansion ready healthcare companies with access to disciplined capital, strategic guidance, and a curated network of physicians, operators, and institutional investors.
                         </p>
                         <div class="pt-4 border-t border-gray-100">
                             <p class="text-xs text-gray-500 italic">
-                                WestBridge Capital invests $10M to $500M across Series A to IPO — bringing institutional depth to every GHF Ventures engagement.
+                                WestBridge Capital invests $10M to $500M across Series A to IPO, bringing institutional depth to every GHF Ventures engagement.
                             </p>
                         </div>
                     </div>
@@ -573,7 +579,7 @@
                     </div>
                     
                     <p class="text-gray-600 text-sm leading-relaxed mb-8">
-                        Through strategic engagement with GHF Ventures, Sensible sharpened its commercial thesis — evolving from a single indication diagnostic model into a scalable, non invasive platform for longitudinal reproductive health monitoring. Leveraging novel biomarkers derived from menstrual cycle data, Sensible is building clinical grade diagnostic infrastructure for conditions that have historically been underserved by traditional screening pathways.
+                        Through strategic engagement with GHF Ventures, Sensible sharpened its commercial thesis, evolving from a single indication diagnostic model into a scalable, non invasive platform for longitudinal reproductive health monitoring. Leveraging novel biomarkers derived from menstrual cycle data, Sensible is building clinical grade diagnostic infrastructure for conditions that have historically been underserved by traditional screening pathways.
                     </p>
                     
                     <div class="bg-cream-100 p-6 rounded-xl border-l-4 border-teal-600">
@@ -581,7 +587,7 @@
                             GHF Ventures engagement: Strategic positioning, clinical narrative development, and institutional partner introductions.
                         </p>
                         <p class="text-navy-900 text-sm font-bold mb-4">
-                            Sensible was awarded the $25,000 Venture Forum Prize, funded by WestBridge Capital — the first prize of its kind within the GHF platform.
+                            Sensible was awarded the $25,000 Venture Forum Prize, funded by WestBridge Capital, the first prize of its kind within the GHF platform.
                         </p>
                         <p class="font-heading italic text-navy-900 mb-4">
                             "The Global Health Forum was a truly transformative experience for our team… Beyond the competition, we gained invaluable guidance and a lifelong network of physicians, leaders, and investors who genuinely want to help us make an impact."
@@ -724,31 +730,31 @@
                         <div class="mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
                             <i class="fa-solid fa-check text-gold-400 text-xs"></i>
                         </div>
-                        <span class="text-white/90"><strong>Validated Traction</strong> — Active pilots, clinical evidence, or early commercial revenue</span>
+                        <span class="text-white/90"><strong>Validated Traction</strong>: Active pilots, clinical evidence, or early commercial revenue</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
                             <i class="fa-solid fa-check text-gold-400 text-xs"></i>
                         </div>
-                        <span class="text-white/90"><strong>Regulatory Sophistication</strong> — A clear understanding of approval pathways and reimbursement dynamics</span>
+                        <span class="text-white/90"><strong>Regulatory Sophistication</strong>: A clear understanding of approval pathways and reimbursement dynamics</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
                             <i class="fa-solid fa-check text-gold-400 text-xs"></i>
                         </div>
-                        <span class="text-white/90"><strong>System Level Ambition</strong> — Solutions designed for adoption within health systems, not around them</span>
+                        <span class="text-white/90"><strong>System Level Ambition</strong>: Solutions designed for adoption within health systems, not around them</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
                             <i class="fa-solid fa-check text-gold-400 text-xs"></i>
                         </div>
-                        <span class="text-white/90"><strong>Operational Discipline</strong> — Strong governance, financial controls, and execution infrastructure</span>
+                        <span class="text-white/90"><strong>Operational Discipline</strong>: Strong governance, financial controls, and execution infrastructure</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="mt-1 w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
                             <i class="fa-solid fa-check text-gold-400 text-xs"></i>
                         </div>
-                        <span class="text-white/90"><strong>Global Orientation</strong> — Openness to cross border partnerships and international market development</span>
+                        <span class="text-white/90"><strong>Global Orientation</strong>: Openness to cross border partnerships and international market development</span>
                     </li>
                 </ul>
                 
@@ -772,25 +778,25 @@
                 <h2 class="font-heading text-4xl md:text-5xl font-bold mb-8">Institutional Access</h2>
                 
                 <p class="text-white/90 text-lg mb-8">
-                    GHF Ventures provides institutional investors with proprietary access to a rigorously curated portfolio of healthcare innovations — vetted through clinical, regulatory, and operational lenses before any engagement.
+                    GHF Ventures provides institutional investors with proprietary access to a rigorously curated portfolio of healthcare innovations, vetted through clinical, regulatory, and operational lenses before any engagement.
                 </p>
                 
                 <ul class="space-y-6 mb-12">
                     <li class="flex items-start gap-4">
                         <div class="mt-1 w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></div>
-                        <span class="text-white/80 leading-relaxed"><strong>Curated Access</strong> — Engage with category leading founders within the trusted Global Health Forum ecosystem, selected for clinical relevance and commercial readiness</span>
+                        <span class="text-white/80 leading-relaxed"><strong>Curated Access</strong>: Engage with category leading founders within the trusted Global Health Forum ecosystem, selected for clinical relevance and commercial readiness</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="mt-1 w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></div>
-                        <span class="text-white/80 leading-relaxed"><strong>Cross Border Exposure</strong> — Strategic access to high growth U.S. India healthcare corridors, including digital health, diagnostics, and health system integration</span>
+                        <span class="text-white/80 leading-relaxed"><strong>Cross Border Exposure</strong>: Strategic access to high growth U.S. India healthcare corridors, including digital health, diagnostics, and health system integration</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="mt-1 w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></div>
-                        <span class="text-white/80 leading-relaxed"><strong>Structured Dialogue</strong> — Facilitated, high conviction engagements designed for strategic capital deployment, not volume</span>
+                        <span class="text-white/80 leading-relaxed"><strong>Structured Dialogue</strong>: Facilitated, high conviction engagements designed for strategic capital deployment, not volume</span>
                     </li>
                     <li class="flex items-start gap-4">
                         <div class="mt-1 w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></div>
-                        <span class="text-white/80 leading-relaxed"><strong>Ecosystem Intelligence</strong> — Year round access to GHF's network of health system executives, clinical leaders, and regulatory experts</span>
+                        <span class="text-white/80 leading-relaxed"><strong>Ecosystem Intelligence</strong>: Year round access to GHF's network of health system executives, clinical leaders, and regulatory experts</span>
                     </li>
                 </ul>
                 
@@ -830,7 +836,7 @@
                         </div>
                         <div class="flex items-center gap-3 text-white/80">
                             <i class="fa-solid fa-location-dot text-gold-500 w-5"></i>
-                            <span>Yale Club, New York City</span>
+                            <span>THE Yale Club, New York City</span>
                         </div>
                     </div>
                 </div>
@@ -908,7 +914,7 @@
                         
                         <i class="fa-solid fa-quote-left text-4xl text-gold-500/30 mb-6"></i>
                         <h3 class="font-heading text-3xl md:text-4xl text-white font-bold leading-tight relative z-10">
-                            Innovation is embedded within infrastructure — not isolated from it.
+                            Innovation is embedded within infrastructure, not isolated from it.
                         </h3>
                         <div class="mt-8 w-16 h-1 bg-gold-500"></div>
                     </div>
@@ -1133,9 +1139,9 @@
             <div class="fade-up delay-200 text-center mt-10">
                 <p class="text-white/50 text-sm mb-2">Prefer to reach out directly?</p>
                 <p class="text-gold-500 text-sm font-medium">
-                    <a href="mailto:gautam_bazaz@hotmail.com" class="hover:text-gold-400 transition-colors">gautam_bazaz@hotmail.com</a>
+                    <a href="mailto:info@ghfventures.com" class="hover:text-gold-400 transition-colors">info@ghfventures.com</a>
                     <span class="mx-2 text-white/30">&middot;</span>
-                    <a href="mailto:nikkibajaj@hopeoncologynj.com" class="hover:text-gold-400 transition-colors">nikkibajaj@hopeoncologynj.com</a>
+                    <a href="mailto:info@ghfventures.com" class="hover:text-gold-400 transition-colors">info@ghfventures.com</a>
                 </p>
             </div>
         </div>
@@ -1195,9 +1201,15 @@
                 });
             }, observerOptions);
 
-	            document.querySelectorAll('.fade-up').forEach(el => {
-	                observer.observe(el);
-	            });
+            document.querySelectorAll('.fade-up').forEach(el => {
+                // Immediately show elements already in the viewport on load
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add('visible');
+                } else {
+                    observer.observe(el);
+                }
+            });
 
 	            // 1.1 Count-up Animation
 	            const countUpObserver = new IntersectionObserver((entries) => {
