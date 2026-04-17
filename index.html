@@ -1039,26 +1039,28 @@
                 </div>
 
                 <!-- Founder Form -->
-                <form id="form-founder" class="block">
+                <form id="form-founder" class="block" name="founder-application" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="founder-application">
+                    <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Full Name</label>
-                        <input type="text" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="text" name="full-name" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Email Address</label>
-                        <input type="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="email" name="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Company Name</label>
-                        <input type="text" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="text" name="company-name" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Company Website <span class="text-gray-400 font-normal">(Optional)</span></label>
-                        <input type="url" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="url" name="company-website" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Stage</label>
-                        <select required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow bg-white">
+                        <select name="stage" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow bg-white">
                             <option value="" disabled selected>Select your current stage</option>
                             <option value="pre-revenue">Pre Revenue / Pilot</option>
                             <option value="early-revenue">Early Revenue</option>
@@ -1068,65 +1070,70 @@
                     </div>
                     <div class="mb-8">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Brief Description of Your Company</label>
-                        <textarea required rows="4" placeholder="What problem are you solving and what traction do you have?" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow resize-none"></textarea>
+                        <textarea name="description" required rows="4" placeholder="What problem are you solving and what traction do you have?" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow resize-none"></textarea>
                     </div>
-                    <button type="button" class="w-full py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-lg transition-colors duration-300">
+                    <button type="submit" class="w-full py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-lg transition-colors duration-300">
                         Submit Founder Application
                     </button>
                 </form>
 
                 <!-- Investor Form -->
-                <form id="form-investor" class="hidden">
+                <form id="form-investor" class="hidden" name="investor-access" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="investor-access">
+                    <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Full Name</label>
-                        <input type="text" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="text" name="full-name" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Email Address</label>
-                        <input type="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="email" name="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Organization / Firm</label>
-                        <input type="text" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="text" name="organization" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Role / Title</label>
-                        <input type="text" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="text" name="role" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-3">Areas of Interest</label>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
+                                <input type="checkbox" name="interest-ai" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
                                 <span class="text-sm text-gray-700 group-hover:text-navy-900 transition-colors">AI in Clinical Practice</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
+                                <input type="checkbox" name="interest-digital-health" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
                                 <span class="text-sm text-gray-700 group-hover:text-navy-900 transition-colors">Digital Health Infrastructure</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
+                                <input type="checkbox" name="interest-wellness" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
                                 <span class="text-sm text-gray-700 group-hover:text-navy-900 transition-colors">Wellness and Longevity</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
+                                <input type="checkbox" name="interest-cross-border" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
                                 <span class="text-sm text-gray-700 group-hover:text-navy-900 transition-colors">Cross Border Healthcare</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
+                                <input type="checkbox" name="interest-health-equity" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
                                 <span class="text-sm text-gray-700 group-hover:text-navy-900 transition-colors">Health Equity Innovation</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
+                                <input type="checkbox" name="interest-operations" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
                                 <span class="text-sm text-gray-700 group-hover:text-navy-900 transition-colors">Operational Efficiency</span>
                             </label>
                         </div>
                     </div>
                     <div class="mb-8">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Message <span class="text-gray-400 font-normal">(Optional)</span></label>
-                        <textarea rows="3" placeholder="Tell us about your investment focus and what you are looking for." class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow resize-none"></textarea>
+                        <textarea name="message" rows="3" placeholder="Tell us about your investment focus and what you are looking for." class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow resize-none"></textarea>
                     </div>
-                    <button type="button" class="w-full py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-lg transition-colors duration-300">
+                    <button type="submit" class="w-full py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-lg transition-colors duration-300">
+                        Request Investor Access
+                    </button>
+                </form>
                         Request Investor Access
                     </button>
                 </form>
