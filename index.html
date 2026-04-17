@@ -158,9 +158,115 @@
         .nav-scrolled .hamburger-line {
             background-color: #0A1628;
         }
+
+        /* Photo strip hover zoom */
+        .photo-strip-img {
+            transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .photo-strip-img:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-white selection:bg-gold-500 selection:text-navy-900">
+
+<!-- ═══════════════════════════════════════════════════════════
+     ANNOUNCEMENT POPUP — Now Accepting Submissions
+═══════════════════════════════════════════════════════════ -->
+<div id="announcement-popup" class="fixed inset-0 z-[9999] flex items-center justify-center p-4" style="display:none!important;">
+    <!-- Backdrop -->
+    <div id="popup-backdrop" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+    
+    <!-- Modal card -->
+    <div class="relative z-10 max-w-lg w-full mx-auto rounded-sm overflow-hidden shadow-2xl" 
+         style="background: linear-gradient(160deg, #0d1f3c 0%, #0a1628 50%, #0c1a30 100%); border: 1px solid rgba(201,168,76,0.3);">
+        
+        <!-- Subtle texture overlay -->
+        <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 18px 18px;"></div>
+        
+        <!-- Top gold rule -->
+        <div style="height:2px; background: linear-gradient(90deg, transparent, #C9A84C, transparent);"></div>
+        
+        <!-- Close button -->
+        <button id="popup-close" class="absolute top-4 right-4 text-white/40 hover:text-gold-400 transition-colors z-20" style="font-size:1.25rem; line-height:1; background:none; border:none; cursor:pointer;">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <!-- Content -->
+        <div class="relative z-10 px-10 py-10 text-center">
+            
+            <!-- Logo lockup -->
+            <p class="font-mono text-gold-500 text-xs uppercase tracking-widest mb-1" style="letter-spacing:0.18em;">GHF Ventures</p>
+            <p class="font-mono text-white/35 text-xs uppercase tracking-widest mb-6" style="font-size:0.6rem; letter-spacing:0.14em;">The Innovation &amp; Capital Platform of the Global Health Forum</p>
+            
+            <!-- Gold divider -->
+            <div style="height:1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent); margin-bottom:1.75rem;"></div>
+            
+            <!-- Pre-headline -->
+            <p class="text-white/60 font-light mb-3" style="font-size:0.9rem;">Following the continued success of last year's event,</p>
+            
+            <!-- Main headline -->
+            <h2 class="font-heading italic text-gold-400 mb-6" style="font-size:clamp(1.6rem,4vw,2.1rem); line-height:1.2; font-weight:600;">Calling All Healthcare<br>Innovators &amp; Startups</h2>
+            
+            <!-- Body -->
+            <p class="text-white/65 font-light leading-relaxed mb-6" style="font-size:0.9rem;">
+                GHF Ventures selects a limited number of companies building the future of healthcare to present their innovations to institutional investors and health leaders.
+            </p>
+            
+            <!-- Bullet points -->
+            <ul class="text-left mb-7 space-y-2 inline-block">
+                <li class="flex items-start gap-3 text-white/75" style="font-size:0.875rem;">
+                    <span class="text-gold-500 mt-0.5 flex-shrink-0">•</span>
+                    <span><strong class="text-white font-semibold">Access funding pathways up to $1M</strong></span>
+                </li>
+                <li class="flex items-start gap-3 text-white/75" style="font-size:0.875rem;">
+                    <span class="text-gold-500 mt-0.5 flex-shrink-0">•</span>
+                    <span>Present at the Global Health Congress, New York</span>
+                </li>
+                <li class="flex items-start gap-3 text-white/75" style="font-size:0.875rem;">
+                    <span class="text-gold-500 mt-0.5 flex-shrink-0">•</span>
+                    <span>Engage with institutional investors and decision makers</span>
+                </li>
+            </ul>
+            
+            <!-- Gold divider with dots -->
+            <div class="flex items-center gap-3 mb-5">
+                <div style="flex:1; height:1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3));"></div>
+                <span class="text-gold-500/40 font-mono text-xs">· · ·</span>
+                <div style="flex:1; height:1px; background: linear-gradient(90deg, rgba(201,168,76,0.3), transparent);"></div>
+            </div>
+            
+            <!-- Event details -->
+            <p class="text-white/55 font-light mb-1" style="font-size:0.8rem; letter-spacing:0.04em;">
+                <span class="text-gold-400 font-medium">Global Health Congress</span> &nbsp;|&nbsp; GHF Ventures &nbsp;|&nbsp; New York City
+            </p>
+            <p class="text-white/70 font-medium mb-1" style="font-size:0.85rem;">October 11, 2026</p>
+            <p class="text-white/45 font-light mb-7" style="font-size:0.8rem;">THE Yale Club &nbsp;|&nbsp; New York City</p>
+            
+            <!-- CTA -->
+            <div class="mb-6">
+                <p class="font-heading italic text-gold-400 mb-2" style="font-size:1.1rem;">Accepting Applications</p>
+                <a href="#contact" id="popup-cta" class="inline-block w-full py-3.5 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-sm transition-colors duration-300 text-sm tracking-wide">
+                    Apply for Consideration
+                </a>
+            </div>
+            
+            <!-- Gold divider with dots -->
+            <div class="flex items-center gap-3 mb-5">
+                <div style="flex:1; height:1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3));"></div>
+                <span class="text-gold-500/40 font-mono text-xs">· · ·</span>
+                <div style="flex:1; height:1px; background: linear-gradient(90deg, rgba(201,168,76,0.3), transparent);"></div>
+            </div>
+            
+            <!-- WestBridge -->
+            <p class="text-white/35 font-light mb-1" style="font-size:0.75rem; letter-spacing:0.06em;">In partnership with</p>
+            <p class="text-white/60 font-heading font-semibold" style="font-size:1rem; letter-spacing:0.02em;">WestBridge</p>
+        </div>
+        
+        <!-- Bottom gold rule -->
+        <div style="height:2px; background: linear-gradient(90deg, transparent, #C9A84C, transparent);"></div>
+    </div>
+</div>
 
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 border-b border-white/10">
@@ -212,6 +318,8 @@
 
     <!-- SECTION 1: HERO -->
     <section class="relative min-h-screen flex items-center justify-center bg-navy-900 overflow-hidden pt-20">
+        <!-- Hero photo layer -->
+        <div class="absolute inset-0 z-0" style="background-image:url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1920&q=80');background-size:cover;background-position:center;opacity:0.12;"></div>
         <!-- Abstract Background Elements -->
         <div class="absolute inset-0 bg-pattern-dots opacity-20"></div>
         <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-teal-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
@@ -252,10 +360,7 @@
                     <a href="#contact" class="w-full sm:w-auto px-8 py-4 border border-gold-500 text-gold-500 hover:bg-gold-500/10 font-semibold rounded-sm transition-all duration-300 text-center hover:-translate-y-1">
                         Partner as Investor
                     </a>
-                    <a href="#integration" class="w-full sm:w-auto text-white/60 hover:text-white text-sm font-medium transition-colors flex items-center justify-center sm:justify-start gap-2 mt-4 sm:mt-0 group">
-                        About Global Health Forum 
-                        <i class="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
-                    </a>
+
                 </div>
             </div>
         </div>
@@ -266,6 +371,9 @@
             <i class="fa-solid fa-arrow-down text-white/50 text-sm"></i>
         </div>
     </section>
+
+    <!-- Gold-Teal gradient divider -->
+    <div style="height:2px;background:linear-gradient(90deg,#0D6E6E,#C9A84C,#0D6E6E);opacity:0.4;"></div>
 
     <!-- SECTION 2: WHY WE EXIST -->
     <section id="why-we-exist" class="py-24 lg:py-32 bg-cream-200 relative">
@@ -288,6 +396,7 @@
                                 GHF Ventures was built to close that gap.
                             </p>
                         </div>
+
                     </div>
                 </div>
                 
@@ -299,35 +408,35 @@
                         </h3>
                         
                         <div class="grid grid-cols-1 gap-4 mb-12">
-                            <div class="px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                            <div class="px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 border-l-2 border-l-teal-600 flex items-center gap-4">
                                 <span class="w-8 h-8 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center font-bold">1</span>
                                 <div>
                                     <span class="block font-bold text-base">Clinical Efficacy</span>
                                     <span class="text-gray-500 font-normal">Validated solutions addressing critical, unmet care needs</span>
                                 </div>
                             </div>
-                            <div class="px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                            <div class="px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 border-l-2 border-l-teal-600 flex items-center gap-4">
                                 <span class="w-8 h-8 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center font-bold">2</span>
                                 <div>
                                     <span class="block font-bold text-base">Operational Maturity</span>
-                                    <span class="text-gray-500 font-normal">Governance structures and regulatory alignment that de risk scaling</span>
+                                    <span class="text-gray-500 font-normal">Governance structures and regulatory alignment that reduce scaling risk</span>
                                 </div>
                             </div>
-                            <div class="px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                            <div class="px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 border-l-2 border-l-teal-600 flex items-center gap-4">
                                 <span class="w-8 h-8 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center font-bold">3</span>
                                 <div>
                                     <span class="block font-bold text-base">System Integration</span>
                                     <span class="text-gray-500 font-normal">Designed for adoption within existing health infrastructure</span>
                                 </div>
                             </div>
-                            <div class="px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                            <div class="px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 border-l-2 border-l-teal-600 flex items-center gap-4">
                                 <span class="w-8 h-8 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center font-bold">4</span>
                                 <div>
                                     <span class="block font-bold text-base">Global Scalability</span>
                                     <span class="text-gray-500 font-normal">Viable across diverse markets, regulatory environments, and care models</span>
                                 </div>
                             </div>
-                            <div class="px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                            <div class="px-5 py-4 bg-white text-navy-900 font-medium text-sm rounded-xl shadow-sm border border-gray-100 border-l-2 border-l-teal-600 flex items-center gap-4">
                                 <span class="w-8 h-8 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center font-bold">5</span>
                                 <div>
                                     <span class="block font-bold text-base">Health Equity</span>
@@ -336,22 +445,41 @@
                             </div>
                         </div>
                         
-                        <p class="font-heading italic text-xl text-gray-500 text-center lg:text-left">
-                            Our mandate is durable, system level value creation.
-                        </p>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Gold-Teal gradient divider -->
+    <div style="height:2px;background:linear-gradient(90deg,#0D6E6E,#C9A84C,#0D6E6E);opacity:0.4;"></div>
+
     <!-- SECTION 3: OUR STRUCTURE -->
-    <section id="structure" class="py-24 lg:py-32 bg-white">
+    <section id="structure" class="py-24 lg:py-32 bg-white" style="border-top: 3px solid rgba(13,110,110,0.15);">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="fade-up text-center max-w-3xl mx-auto mb-20">
                 <span class="text-teal-600 font-bold tracking-widest text-xs uppercase mb-4 block">Our Structure</span>
                 <h2 class="font-heading text-4xl md:text-5xl text-navy-900 font-bold mb-6">Three Integrated Pathways</h2>
-                    <p class="text-gray-600 text-lg">GHF Ventures operates through a structured, multi tiered approach to ensure continuous engagement and alignment.</p>
+            </div>
+
+            <!-- AI + People photo strip -->
+            <div class="grid grid-cols-3 gap-3 mb-16 rounded-xl overflow-hidden" style="height:200px;">
+                <div class="overflow-hidden rounded-lg">
+                     <img src="https://gw-tk.tanka.ai/npc/v2/file/921fbfed-effa-42c9-9d64-15723cd35cb3" 
+             alt="Diverse healthcare team collaborating" 
+             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                     <img src="https://gw-tk.tanka.ai/npc/v2/file/b30d73e6-6351-422d-84b8-f0c06e0496d1" 
+             alt="Physician reviewing clinical data on tablet" 
+             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+         <img src="https://gw-tk.tanka.ai/npc/v2/file/729c8413-2982-4e27-88eb-7d3ed1589bee" 
+             alt="Healthcare data intelligence" 
+             class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -383,9 +511,6 @@
                         </li>
                     </ul>
                     
-                    <div class="pt-6 border-t border-gray-200 relative z-10">
-                        <p class="text-xs text-gray-500 italic">Feedback emphasizes governance, regulatory clarity, and long term scalability.</p>
-                    </div>
                 </div>
 
                 <!-- Card 2 -->
@@ -401,11 +526,6 @@
                         Held annually during Global Health Congress. Selected ventures present within a moderated format designed for substantive engagement, not theatrical pitching.
                     </p>
                     
-                    <div class="p-4 bg-white/5 rounded-lg border border-white/10 relative z-10 mt-auto">
-                        <p class="text-gold-400 font-medium text-sm text-center">
-                            The focus is disciplined capital alignment and institutional partnership.
-                        </p>
-                    </div>
                 </div>
 
                 <!-- Card 3 -->
@@ -418,7 +538,7 @@
                     
                     <h3 class="font-heading text-2xl text-navy-900 font-bold mb-4 relative z-10">Year Round Capital Alignment</h3>
                     <p class="text-gray-600 mb-6 text-sm leading-relaxed relative z-10">
-                        GHF Ventures facilitates introductions across our global network:
+                        GHF Ventures connects founders with partners across our global network:
                     </p>
                     
                     <ul class="space-y-3 mb-6 relative z-10">
@@ -439,14 +559,12 @@
                         </li>
                     </ul>
                     
-                    <div class="pt-6 border-t border-gray-200 relative z-10">
-                        <p class="text-xs text-gray-500 italic">Capital conversations occur within a trusted, curated environment.</p>
-                    </div>
                 </div>
             </div>
 
             <!-- Strategic Partner Card -->
             <div class="fade-up max-w-4xl mx-auto bg-white border border-gray-100 rounded-xl p-8 lg:p-10 shadow-subtle relative overflow-hidden">
+                <div class="absolute inset-0 pointer-events-none" style="background-image:url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80');background-size:cover;background-position:center;opacity:0.06;"></div>
                 <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gold-500"></div>
                 <div class="flex flex-col md:flex-row gap-8 items-center">
                     <div class="md:w-1/3 flex justify-center md:justify-start">
@@ -459,11 +577,8 @@
                         <h3 class="font-heading text-2xl text-navy-900 font-bold mb-4">
                             <span class="text-gold-500">WestBridge Capital</span>
                         </h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            GHF Ventures has established a strategic partnership with WestBridge Capital, a $7 billion evergreen fund and one of the most active institutional investors in healthcare and technology across the U.S. and India.
-                        </p>
                         <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            WestBridge Capital funds the annual GHF Ventures Forum Prize and co structures the founder and advisory cohort program, providing expansion ready healthcare companies with access to disciplined capital, strategic guidance, and a curated network of physicians, operators, and institutional investors.
+                            In partnership with WestBridge Capital, GHF Ventures connects expansion ready healthcare companies with disciplined capital, strategic guidance, and a curated network of investors and operators.
                         </p>
                         <div class="pt-4 border-t border-gray-100">
                             <p class="text-xs text-gray-500 italic">
@@ -481,6 +596,8 @@
         <!-- Decorative Elements -->
         <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent"></div>
         <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-600/30 to-transparent"></div>
+        <!-- Teal radial glow behind main stat -->
+        <div class="absolute rounded-full pointer-events-none" style="width:400px;height:400px;background:radial-gradient(circle,rgba(13,110,110,0.18) 0%,transparent 65%);filter:blur(60px);top:50%;left:50%;transform:translate(-50%,-50%);"></div>
         
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
@@ -551,7 +668,7 @@
                             </div>
 	                            <div class="flex items-center gap-3">
 	                                <i class="fa-solid fa-arrow-right text-gold-500 text-sm"></i>
-	                                <span class="text-white/80">Cross border collaboration</span>
+	                                <span class="text-white/80">Cross border engagement</span>
 	                            </div>
                         </div>
                     </div>
@@ -559,6 +676,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Gold-Teal gradient divider -->
+    <div style="height:2px;background:linear-gradient(90deg,#0D6E6E,#C9A84C,#0D6E6E);opacity:0.4;"></div>
 
     <!-- SECTION 5: VENTURE SPOTLIGHTS -->
     <section class="py-24 lg:py-32 bg-cream-200">
@@ -579,24 +699,21 @@
                     </div>
                     
                     <p class="text-gray-600 text-sm leading-relaxed mb-8">
-                        Through strategic engagement with GHF Ventures, Sensible sharpened its commercial thesis, evolving from a single indication diagnostic model into a scalable, non invasive platform for longitudinal reproductive health monitoring. Leveraging novel biomarkers derived from menstrual cycle data, Sensible is building clinical grade diagnostic infrastructure for conditions that have historically been underserved by traditional screening pathways.
+                        Through strategic engagement with GHF Ventures, Sensible sharpened its commercial thesis, evolving from a single indication diagnostic model into a scalable, non invasive platform for longitudinal reproductive health monitoring.
                     </p>
                     
                     <div class="bg-cream-100 p-6 rounded-xl border-l-4 border-teal-600">
-                        <p class="text-navy-900 text-sm italic mb-4">
-                            GHF Ventures engagement: Strategic positioning, clinical narrative development, and institutional partner introductions.
-                        </p>
                         <p class="text-navy-900 text-sm font-bold mb-4">
                             Sensible was awarded the $25,000 Venture Forum Prize, funded by WestBridge Capital, the first prize of its kind within the GHF platform.
                         </p>
                         <p class="font-heading italic text-navy-900 mb-4">
-                            "The Global Health Forum was a truly transformative experience for our team… Beyond the competition, we gained invaluable guidance and a lifelong network of physicians, leaders, and investors who genuinely want to help us make an impact."
+                            "The Global Health Forum was a truly transformative experience for our team. Beyond the forum, we gained invaluable guidance and a lifelong network of physicians, leaders, and investors who genuinely want to help us make an impact."
                         </p>
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center text-white font-bold text-sm">NK</div>
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&q=80" alt="Nandini Kanthi" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
                             <div>
                                 <p class="text-sm font-bold text-navy-900">Nandini Kanthi</p>
-                                <p class="text-xs text-gray-500">CEO & Co Founder, Sensible</p>
+                                <p class="text-xs text-gray-500">CEO &amp; Co Founder, Sensible</p>
                             </div>
                         </div>
                     </div>
@@ -604,6 +721,11 @@
 
                 <!-- Testimonial 2 -->
                 <div class="fade-up delay-100 bg-white rounded-2xl p-8 lg:p-10 shadow-subtle relative">
+                    <div class="rounded-lg overflow-hidden mb-6" style="height:160px;">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80" 
+                             alt="Collaborative tech team" 
+                             class="w-full h-full object-cover object-top">
+                    </div>
                     <i class="fa-solid fa-quote-right absolute top-8 right-8 text-4xl text-cream-200"></i>
                     
                     <div class="mb-8">
@@ -612,7 +734,7 @@
                     </div>
                     
                     <p class="text-gray-600 text-sm leading-relaxed mb-8">
-                        Founder engagement within Global Health Forum created direct access to senior leaders, resulting in strategic conversations with IBM and Elsevier and tangible funding and collaboration outcomes.
+                        Founder engagement within Global Health Forum created direct access to senior leaders, resulting in strategic conversations with IBM and Elsevier and tangible funding and engagement outcomes.
                     </p>
                     
                     <div class="bg-cream-100 p-6 rounded-xl border-l-4 border-teal-600 mt-auto">
@@ -620,7 +742,7 @@
                             "What made the Global Health Forum exceptional was the openness of the environment and the ability to engage directly with senior leaders… In a very real sense, the Forum played a concrete role in moving our work forward."
                         </p>
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-navy-900 flex items-center justify-center text-white font-bold text-sm">MH</div>
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&q=80" alt="Mireille van Hal" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
                             <div>
                                 <p class="text-sm font-bold text-navy-900">Mireille van Hal</p>
                                 <p class="text-xs text-gray-500">Co Founder, Keendoc</p>
@@ -695,17 +817,30 @@
 	                    <div class="w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors">
 	                        <span class="font-mono font-bold text-xl">05</span>
 	                    </div>
-	                    <h3 class="font-heading text-xl text-navy-900 font-bold mb-3">Equity Driven Innovation</h3>
+	                    <h3 class="font-heading text-xl text-navy-900 font-bold mb-3">Access and Equity Innovation</h3>
 	                    <div class="w-8 h-px bg-gray-300 group-hover:w-full group-hover:bg-teal-600 transition-all duration-500"></div>
 	                </div>
 	
-	                <!-- Theme 6 -->
-	                <div class="fade-up delay-200 group p-8 border border-gray-100 rounded-xl hover:border-teal-600/30 hover:bg-cream-100/50 transition-all duration-300">
-	                    <div class="w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors">
-	                        <span class="font-mono font-bold text-xl">06</span>
+                <!-- Theme 6 -->
+                <div class="fade-up delay-200 group p-8 border border-gray-100 rounded-xl hover:border-teal-600/30 hover:bg-cream-100/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-navy-900 text-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors">
+                        <span class="font-mono font-bold text-xl">06</span>
                     </div>
 	                    <h3 class="font-heading text-xl text-navy-900 font-bold mb-3">Cross Border Healthcare Integration</h3>
                     <div class="w-8 h-px bg-gray-300 group-hover:w-full group-hover:bg-teal-600 transition-all duration-500"></div>
+                </div>
+            </div>
+
+            <!-- AI health tech photo banner -->
+            <div class="mt-16 rounded-xl overflow-hidden relative" style="height:260px;">
+                <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1400&q=80" 
+                     alt="AI in healthcare" 
+                     class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(10,22,40,0.75) 0%, rgba(10,22,40,0.2) 50%, rgba(10,22,40,0.75) 100%);"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <p class="font-heading italic text-white text-2xl md:text-3xl text-center px-8" style="text-shadow: 0 2px 20px rgba(0,0,0,0.5);">
+                        "The intersection of clinical intelligence and institutional capital."
+                    </p>
                 </div>
             </div>
         </div>
@@ -715,6 +850,7 @@
     <section class="flex flex-col lg:flex-row min-h-[80vh]">
         <!-- FOR FOUNDERS -->
         <div id="founders" class="lg:w-1/2 bg-teal-700 text-white py-24 lg:py-32 px-6 lg:px-16 xl:px-24 flex flex-col justify-center relative overflow-hidden">
+            <div class="absolute inset-0 z-0" style="background-image:url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80');background-size:cover;background-position:center;opacity:0.08;"></div>
             <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             
             <div class="relative z-10 fade-up max-w-xl ml-auto lg:mr-0">
@@ -722,7 +858,7 @@
                 <h2 class="font-heading text-4xl md:text-5xl font-bold mb-8">Execution Readiness</h2>
                 
                 <p class="text-white/90 text-lg mb-8">
-                    We partner with visionary leaders navigating the transition from clinical validation to commercial scale. GHF Ventures is designed for expansion ready companies that demonstrate:
+                    GHF Ventures is designed for expansion ready companies that demonstrate:
                 </p>
                 
                 <ul class="space-y-5 mb-12">
@@ -758,9 +894,9 @@
                     </li>
                 </ul>
                 
-                <p class="text-white/90 text-lg mb-12">
-                    We provide the strategic counsel, institutional relationships, and capital network required to navigate complex growth inflection points.
-                </p>
+                <div class="border-l-2 border-gold-500 pl-5 py-1 my-6">
+                    <p class="font-heading italic text-gold-400 text-lg">Engagement is selective and aligned with long term partnership.</p>
+                </div>
                 
                 <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold rounded-sm transition-all duration-300 group">
                     Apply for 2026 Cohort
@@ -772,14 +908,13 @@
         <!-- FOR INVESTORS -->
         <div id="investors" class="lg:w-1/2 bg-navy-900 text-white py-24 lg:py-32 px-6 lg:px-16 xl:px-24 flex flex-col justify-center relative overflow-hidden">
             <div class="absolute bottom-0 left-0 w-64 h-64 bg-teal-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+            <div class="absolute inset-0 z-0 pointer-events-none" style="background-image:url('https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&q=80');background-size:cover;background-position:center;opacity:0.07;"></div>
             
             <div class="relative z-10 fade-up delay-100 max-w-xl mr-auto lg:ml-0">
                 <span class="text-teal-400 font-bold tracking-widest text-xs uppercase mb-4 block">FOR INVESTORS</span>
                 <h2 class="font-heading text-4xl md:text-5xl font-bold mb-8">Institutional Access</h2>
                 
-                <p class="text-white/90 text-lg mb-8">
-                    GHF Ventures provides institutional investors with proprietary access to a rigorously curated portfolio of healthcare innovations, vetted through clinical, regulatory, and operational lenses before any engagement.
-                </p>
+
                 
                 <ul class="space-y-6 mb-12">
                     <li class="flex items-start gap-4">
@@ -800,10 +935,8 @@
                     </li>
                 </ul>
                 
-                <div class="bg-white/5 p-5 rounded-lg border border-white/10 mb-10">
-                    <p class="font-medium text-gold-400 text-sm">
-                        We build long term capital partnerships grounded in strategic alignment and shared conviction.
-                    </p>
+                <div class="border-l-2 border-gold-500 pl-5 py-1 my-6">
+                    <p class="font-heading italic text-gold-400 text-lg">Engagement is selective and aligned with long term partnership.</p>
                 </div>
                 
                 <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-gold-500 text-gold-500 hover:bg-gold-500/10 font-semibold rounded-sm transition-all duration-300 group">
@@ -821,6 +954,9 @@
                 <!-- Image/Graphic Side -->
                 <div class="md:w-2/5 bg-navy-900 relative p-10 flex flex-col justify-between min-h-[300px]">
                     <div class="absolute inset-0 bg-pattern-lines opacity-20"></div>
+                    <div class="absolute inset-0 overflow-hidden rounded-l-2xl">
+                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&q=80" alt="Clinical professional" class="w-full h-full object-cover opacity-25">
+                    </div>
                     <div class="relative z-10">
                         <div class="w-12 h-12 bg-gold-500 rounded-sm flex items-center justify-center mb-6">
                             <i class="fa-solid fa-building-columns text-navy-900 text-xl"></i>
@@ -848,9 +984,15 @@
                     
                     <p class="text-gray-600 mb-4 font-medium">Takes place on October 11.</p>
                     
-	                    <p class="text-gray-600 leading-relaxed mb-10">
+	                    <p class="text-gray-600 leading-relaxed mb-6">
 	                        Selected ventures engage with institutional investors, health system leaders, and cross border partners in a curated environment designed for disciplined capital alignment.
 	                    </p>
+
+                    <div class="rounded-sm overflow-hidden shadow-card-lg mb-8" style="height:280px;">
+                        <img src="https://gw-tk.tanka.ai/npc/v2/file/b30d73e6-6351-422d-84b8-f0c06e0496d1" 
+                             alt="Physician reviewing clinical data" 
+                             class="w-full h-full object-cover">
+                    </div>
                     
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#contact" class="px-6 py-3 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold rounded-sm transition-all duration-300 text-center">
@@ -875,7 +1017,7 @@
                     <h2 class="font-heading text-4xl md:text-5xl text-navy-900 font-bold mb-6">The Global Health Forum Ecosystem</h2>
                     
                     <p class="text-gray-600 text-lg mb-8">
-                        GHF Ventures operates within the broader Global Health Forum ecosystem. This provides ventures with access to a comprehensive network of resources and relationships.
+                        GHF Ventures operates within the broader Global Health Forum ecosystem.
                     </p>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
@@ -1022,10 +1164,9 @@
             <div class="fade-up text-center mb-12">
                 <span class="text-gold-500 font-bold tracking-widest text-xs uppercase mb-4 block">GET IN TOUCH</span>
                 <h2 class="font-heading text-4xl md:text-5xl text-white font-bold mb-6">Begin the Conversation</h2>
-                <p class="text-white/70 text-lg leading-relaxed">
-                    Whether you are a founder seeking strategic engagement or an institutional investor looking for curated access, we would like to hear from you.
-                </p>
             </div>
+
+            <p class="font-heading italic text-white/70 text-xl text-center mb-8">Access is selective. Begin the conversation.</p>
 
             <div class="fade-up delay-100 bg-white rounded-2xl shadow-card p-8 lg:p-10">
                 <!-- Role Selector -->
@@ -1044,23 +1185,23 @@
                     <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Full Name</label>
-                        <input type="text" name="full-name" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="text" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Email Address</label>
-                        <input type="email" name="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Company Name</label>
-                        <input type="text" name="company-name" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="text" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Company Website <span class="text-gray-400 font-normal">(Optional)</span></label>
-                        <input type="url" name="company-website" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="url" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Stage</label>
-                        <select name="stage" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow bg-white">
+                        <select required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow bg-white">
                             <option value="" disabled selected>Select your current stage</option>
                             <option value="pre-revenue">Pre Revenue / Pilot</option>
                             <option value="early-revenue">Early Revenue</option>
@@ -1070,70 +1211,67 @@
                     </div>
                     <div class="mb-8">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Brief Description of Your Company</label>
-                        <textarea name="description" required rows="4" placeholder="What problem are you solving and what traction do you have?" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow resize-none"></textarea>
+                        <textarea required rows="4" placeholder="What problem are you solving and what traction do you have?" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow resize-none"></textarea>
                     </div>
-                    <button type="submit" class="w-full py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-lg transition-colors duration-300">
+                    <button type="button" class="w-full py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-lg transition-colors duration-300">
                         Submit Founder Application
                     </button>
                 </form>
 
                 <!-- Investor Form -->
-               <form id="form-investor" class="hidden" name="investor-access" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field">
+                <form id="form-investor" class="hidden" name="investor-access" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="investor-access">
                     <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Full Name</label>
-                        <input type="text" name="full-name" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="text" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Email Address</label>
-                        <input type="email" name="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Organization / Firm</label>
-                        <input type="text" name="organization" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="text" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Role / Title</label>
-                        <input type="text" name="role" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
+                        <input type="text" required class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow">
                     </div>
                     <div class="mb-5">
                         <label class="block text-sm font-semibold text-navy-900 mb-3">Areas of Interest</label>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" name="interest-ai" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
+                                <input type="checkbox" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
                                 <span class="text-sm text-gray-700 group-hover:text-navy-900 transition-colors">AI in Clinical Practice</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" name="interest-digital-health" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
+                                <input type="checkbox" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
                                 <span class="text-sm text-gray-700 group-hover:text-navy-900 transition-colors">Digital Health Infrastructure</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" name="interest-wellness" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
+                                <input type="checkbox" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
                                 <span class="text-sm text-gray-700 group-hover:text-navy-900 transition-colors">Wellness and Longevity</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" name="interest-cross-border" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
+                                <input type="checkbox" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
                                 <span class="text-sm text-gray-700 group-hover:text-navy-900 transition-colors">Cross Border Healthcare</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" name="interest-health-equity" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
+                                <input type="checkbox" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
                                 <span class="text-sm text-gray-700 group-hover:text-navy-900 transition-colors">Health Equity Innovation</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="checkbox" name="interest-operations" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
+                                <input type="checkbox" class="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-600">
                                 <span class="text-sm text-gray-700 group-hover:text-navy-900 transition-colors">Operational Efficiency</span>
                             </label>
                         </div>
                     </div>
                     <div class="mb-8">
                         <label class="block text-sm font-semibold text-navy-900 mb-1">Message <span class="text-gray-400 font-normal">(Optional)</span></label>
-                        <textarea name="message" rows="3" placeholder="Tell us about your investment focus and what you are looking for." class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow resize-none"></textarea>
+                        <textarea rows="3" placeholder="Tell us about your investment focus and what you are looking for." class="w-full border border-gray-200 rounded-lg px-4 py-3 text-navy-900 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-shadow resize-none"></textarea>
                     </div>
-                    <button type="submit" class="w-full py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-lg transition-colors duration-300">
-                        Request Investor Access
-                    </button>
-                </form>
+                    <button type="button" class="w-full py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-lg transition-colors duration-300">
                         Request Investor Access
                     </button>
                 </form>
@@ -1172,7 +1310,7 @@
                 <!-- Center Links -->
                 <div class="flex flex-wrap justify-center gap-6 md:gap-8">
                     <a href="#contact" class="text-white/70 hover:text-gold-500 text-sm font-medium transition-colors">Apply as Founder</a>
-                    <a href="#contact" class="text-white/70 hover:text-gold-500 text-sm font-medium transition-colors">Connect as Investor</a>
+                    <a href="#contact" class="text-white/70 hover:text-gold-500 text-sm font-medium transition-colors">Partner as Investor</a>
                     <a href="#integration" class="text-white/70 hover:text-gold-500 text-sm font-medium transition-colors">About Global Health Forum</a>
                 </div>
             </div>
@@ -1188,6 +1326,38 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    // Announcement popup
+    (function() {
+        var popup = document.getElementById('announcement-popup');
+        var backdrop = document.getElementById('popup-backdrop');
+        var closeBtn = document.getElementById('popup-close');
+        var ctaBtn = document.getElementById('popup-cta');
+        
+        function showPopup() {
+            popup.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function hidePopup() {
+            popup.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+        
+        // Show after 1.5s
+        setTimeout(showPopup, 1500);
+        
+        // Close on X, backdrop, or CTA
+        if (closeBtn) closeBtn.addEventListener('click', hidePopup);
+        if (backdrop) backdrop.addEventListener('click', hidePopup);
+        if (ctaBtn) ctaBtn.addEventListener('click', hidePopup);
+        
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') hidePopup();
+        });
+    })();
+    </script>
 
     <!-- JavaScript for Interactions -->
     <script>
